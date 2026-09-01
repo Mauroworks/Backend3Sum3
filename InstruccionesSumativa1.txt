@@ -1,0 +1,35 @@
+Contexto de la actividad
+En esta actividad, implementarás un sistema de migración de procesos batch utilizando Spring Batch, con el objetivo de modernizar el sistema legacy del Banco XYZ. 
+El enfoque será recrear tres procesos clave: el reporte de transacciones diarias, el cálculo de intereses mensuales y la generación de estados de cuenta anuales. 
+El proyecto debe cumplir con los requisitos para garantizar la integridad y consistencia de los datos, aplicando buenas prácticas en la gestión de errores 
+y optimización del rendimiento.
+
+Instrucciones específicas
+
+1. Configurar un Proyecto Spring Batch ( revisar si la configuración de dependencias es correcta.Usaremos una base de datos H2 en memoria)
+Inicia un proyecto utilizando Spring Batch y configura Jobs y Steps para leer, procesar y escribir los datos de los archivos CSV. ( Estos archivos están en la carpeta csvsemana3)
+2. Implementar un Procesamiento de Datos
+Lee los archivos CSV. Aplica transformaciones y validaciones con un ItemProcessor para corregir o manejar los errores en los datos.
+Escribe los datos procesados en una base de datos relacional. (ocuparemos una H2 en memoria) 
+3. Manejo de Errores y Excepciones:
+Deberás tener en cuenta que la data a ser procesada podría contener datos incorrectos y mal clasificados, por ello deberás manejar reglas para asegurar su consistencia.
+4.  Implementar políticas personalizadas y tolerancia a fallos:
+Deberás tener en cuenta que deberás considerar políticas personalizadas para poder
+implementar una correcta tolerancia a fallos.
+5. Implementar políticas de escalamiento:
+Deberás decidir entre implementar un match optimizado para multi-threads o utilizar
+particiones. Los parámetros de cada configuración deberán ser decididos por ti (Ej:
+cantidad de particiones, cantidad de threads mínimos-maximos, entre otros) (ayúdame con lo que sea mas seguro,) 
+
+Requerimientos del Sistema
+
+Debes reescribir los procesos en Spring Batch.
+Configura un Job para cada uno de los tres procesos:
+    • Reporte de Transacciones Diarias: Procesar transacciones diarias para detectar anomalías y generar un resumen.
+    • Cálculo de Intereses Mensuales: Aplicar intereses sobre cuentas de ahorro y préstamos, y actualizar el saldo final en una base de datos.
+    • Generación de Estados de Cuenta Anuales: Compilar datos anuales para cada cuenta y generar un informe detallado para auditorías
+
+   Documentación 
+    • Documentación (README.md): Describe el objetivo del proyecto, la estructura del código y las instrucciones para ejecutar el proyecto.
+    • Evidencia de Ejecución: Proporciona capturas de pantalla o salidas de consola mostrando la ejecución de cada Job y los resultados generados.
+
