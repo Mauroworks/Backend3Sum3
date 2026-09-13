@@ -1,0 +1,414 @@
+﻿2026-09-13T18:19:48.328-03:00  INFO 24192 --- [bff-mobile] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (https) with context path '/'
+2026-09-13T18:19:48.374-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.config.BatchDataInitializer      : > EJECUTANDO JOB 1: REPORTE DE TRANSACCIONES DIARIAS ...
+2026-09-13T18:19:52.222-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.config.JobExecutionLogger        : ===== FIN STEP 'stepProcesarTransacciones' => leidos=1000, escritos=491, saltados=509, status=COMPLETED =====
+2026-09-13T18:19:53.299-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.ReporteService           : ===== RESUMEN DE TRANSACCIONES DIARIAS =====
+2026-09-13T18:19:53.301-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.ReporteService           : Anomalias detectadas: 90
+2026-09-13T18:19:53.309-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.config.BatchDataInitializer      : < FIN 'jobReporteTransacciones' => status=COMPLETED, exitStatus=exitCode=COMPLETED;exitDescription=;exitException=null
+2026-09-13T18:19:53.310-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.config.BatchDataInitializer      : > EJECUTANDO JOB 2: CALCULO DE INTERESES MENSUALES ...
+2026-09-13T18:19:53.318-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: -1
+2026-09-13T18:19:53.321-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 142 con tipo no valido: -1
+2026-09-13T18:19:53.322-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 110 con tipo no valido: -1
+2026-09-13T18:19:53.319-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 138 con tipo no valido: -1
+2026-09-13T18:19:53.320-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 102 con tipo no valido: -1
+2026-09-13T18:19:53.324-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 134 con tipo no valido: -1
+2026-09-13T18:19:53.324-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 103 con tipo no valido: unknown
+2026-09-13T18:19:53.325-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 120 con tipo no valido: -1
+2026-09-13T18:19:53.327-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 126 con tipo no valido: -1
+2026-09-13T18:19:53.328-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 104 con tipo no valido: -1
+2026-09-13T18:19:53.322-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 103 con tipo no valido: -1
+2026-09-13T18:19:53.329-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 133 con tipo no valido: -1
+2026-09-13T18:19:53.323-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 136 con tipo no valido: -1
+2026-09-13T18:19:53.326-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 140 con tipo no valido: -1
+2026-09-13T18:19:53.329-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 121 con tipo no valido: -1
+2026-09-13T18:19:53.452-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 138 con tipo no valido: -1
+2026-09-13T18:19:53.452-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 119 con tipo no valido: -1
+2026-09-13T18:19:53.455-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 140 con tipo no valido: -1
+2026-09-13T18:19:53.460-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 107 con tipo no valido: -1
+2026-09-13T18:19:53.461-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 120 con tipo no valido: -1
+2026-09-13T18:19:53.462-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 111 con tipo no valido: -1
+2026-09-13T18:19:53.464-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 119 con tipo no valido: -1
+2026-09-13T18:19:53.464-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 130 con tipo no valido: -1
+2026-09-13T18:19:53.464-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 136 con tipo no valido: -1
+2026-09-13T18:19:53.465-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 137 con tipo no valido: -1
+2026-09-13T18:19:53.466-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 102 con tipo no valido: -1
+2026-09-13T18:19:53.466-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: -1
+2026-09-13T18:19:53.467-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 140 con tipo no valido: -1
+2026-09-13T18:19:53.467-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 110 con tipo no valido: -1
+2026-09-13T18:19:53.468-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 122 con tipo no valido: -1
+2026-09-13T18:19:53.470-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 139 con tipo no valido: unknown
+2026-09-13T18:19:53.603-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 103 con tipo no valido: -1
+2026-09-13T18:19:53.604-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 127 con tipo no valido: -1
+2026-09-13T18:19:53.604-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 149 con tipo no valido: -1
+2026-09-13T18:19:53.604-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 115 con tipo no valido: -1
+2026-09-13T18:19:53.605-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 131 con tipo no valido: -1
+2026-09-13T18:19:53.606-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 148 con tipo no valido: unknown
+2026-09-13T18:19:53.607-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 113 con tipo no valido: unknown
+2026-09-13T18:19:53.608-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 135 con tipo no valido: -1
+2026-09-13T18:19:53.610-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 105 con tipo no valido: -1
+2026-09-13T18:19:53.610-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 127 con tipo no valido: -1
+2026-09-13T18:19:53.611-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 113 con tipo no valido: -1
+2026-09-13T18:19:53.612-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 145 con tipo no valido: -1
+2026-09-13T18:19:53.613-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 133 con tipo no valido: -1
+2026-09-13T18:19:53.614-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 128 con tipo no valido: unknown
+2026-09-13T18:19:53.624-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 123 con tipo no valido: -1
+2026-09-13T18:19:53.626-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 121 con tipo no valido: -1
+2026-09-13T18:19:53.627-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 108 con tipo no valido: -1
+2026-09-13T18:19:53.628-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 115 con tipo no valido: -1
+2026-09-13T18:19:53.629-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 135 con tipo no valido: -1
+2026-09-13T18:19:53.630-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 137 con tipo no valido: -1
+2026-09-13T18:19:53.631-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 112 con tipo no valido: -1
+2026-09-13T18:19:53.632-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 111 con tipo no valido: -1
+2026-09-13T18:19:53.683-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 129 con tipo no valido: unknown
+2026-09-13T18:19:53.684-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 122 con tipo no valido: unknown
+2026-09-13T18:19:53.684-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 138 con tipo no valido: -1
+2026-09-13T18:19:53.687-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 146 con tipo no valido: -1
+2026-09-13T18:19:53.687-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 116 con tipo no valido: -1
+2026-09-13T18:19:53.688-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 140 con tipo no valido: -1
+2026-09-13T18:19:53.688-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 105 con tipo no valido: unknown
+2026-09-13T18:19:53.689-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 132 con tipo no valido: -1
+2026-09-13T18:19:53.690-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 120 con tipo no valido: -1
+2026-09-13T18:19:53.703-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 135 con tipo no valido: unknown
+2026-09-13T18:19:53.706-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 132 con tipo no valido: -1
+2026-09-13T18:19:53.707-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 150 con tipo no valido: unknown
+2026-09-13T18:19:53.708-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 120 con tipo no valido: -1
+2026-09-13T18:19:53.708-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 103 con tipo no valido: -1
+2026-09-13T18:19:53.804-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: -1
+2026-09-13T18:19:53.806-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 116 con tipo no valido: -1
+2026-09-13T18:19:53.810-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: -1
+2026-09-13T18:19:53.810-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 150 con tipo no valido: -1
+2026-09-13T18:19:53.811-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 129 con tipo no valido: -1
+2026-09-13T18:19:53.811-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 125 con tipo no valido: -1
+2026-09-13T18:19:53.812-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: -1
+2026-09-13T18:19:53.812-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 138 con tipo no valido: -1
+2026-09-13T18:19:53.813-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 122 con tipo no valido: -1
+2026-09-13T18:19:53.814-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 116 con tipo no valido: -1
+2026-09-13T18:19:53.814-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 129 con tipo no valido: -1
+2026-09-13T18:19:53.815-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 123 con tipo no valido: -1
+2026-09-13T18:19:53.806-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 105 con tipo no valido: -1
+2026-09-13T18:19:53.807-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 140 con tipo no valido: -1
+2026-09-13T18:19:53.809-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 125 con tipo no valido: -1
+2026-09-13T18:19:53.911-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 139 con tipo no valido: unknown
+2026-09-13T18:19:53.912-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 106 con tipo no valido: unknown
+2026-09-13T18:19:53.914-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: -1
+2026-09-13T18:19:53.918-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 136 con tipo no valido: unknown
+2026-09-13T18:19:53.920-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 123 con tipo no valido: -1
+2026-09-13T18:19:53.922-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 122 con tipo no valido: -1
+2026-09-13T18:19:53.923-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 121 con tipo no valido: -1
+2026-09-13T18:19:53.924-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 116 con tipo no valido: -1
+2026-09-13T18:19:53.927-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: -1
+2026-09-13T18:19:53.928-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 128 con tipo no valido: -1
+2026-09-13T18:19:53.929-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 120 con tipo no valido: -1
+2026-09-13T18:19:53.930-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 150 con tipo no valido: -1
+2026-09-13T18:19:53.930-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 121 con tipo no valido: -1
+2026-09-13T18:19:53.931-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: unknown
+2026-09-13T18:19:54.032-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 112 con tipo no valido: -1
+2026-09-13T18:19:54.033-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 149 con tipo no valido: -1
+2026-09-13T18:19:54.033-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 120 con tipo no valido: -1
+2026-09-13T18:19:54.033-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 141 con tipo no valido: -1
+2026-09-13T18:19:54.034-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 144 con tipo no valido: -1
+2026-09-13T18:19:54.035-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 136 con tipo no valido: -1
+2026-09-13T18:19:54.036-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 123 con tipo no valido: -1
+2026-09-13T18:19:54.033-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 132 con tipo no valido: -1
+2026-09-13T18:19:54.033-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 141 con tipo no valido: -1
+2026-09-13T18:19:54.038-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 110 con tipo no valido: -1
+2026-09-13T18:19:54.034-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 123 con tipo no valido: -1
+2026-09-13T18:19:54.039-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 138 con tipo no valido: -1
+2026-09-13T18:19:54.037-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 146 con tipo no valido: -1
+2026-09-13T18:19:54.038-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 113 con tipo no valido: -1
+2026-09-13T18:19:54.039-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 115 con tipo no valido: -1
+2026-09-13T18:19:54.040-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 150 con tipo no valido: -1
+2026-09-13T18:19:54.089-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 101 con tipo no valido: -1
+2026-09-13T18:19:54.138-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 132 con tipo no valido: -1
+2026-09-13T18:19:54.139-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 119 con tipo no valido: -1
+2026-09-13T18:19:54.140-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 146 con tipo no valido: unknown
+2026-09-13T18:19:54.142-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 120 con tipo no valido: -1
+2026-09-13T18:19:54.143-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: unknown
+2026-09-13T18:19:54.143-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 139 con tipo no valido: -1
+2026-09-13T18:19:54.144-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 107 con tipo no valido: -1
+2026-09-13T18:19:54.139-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 113 con tipo no valido: -1
+2026-09-13T18:19:54.140-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 113 con tipo no valido: unknown
+2026-09-13T18:19:54.145-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 120 con tipo no valido: -1
+2026-09-13T18:19:54.141-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 118 con tipo no valido: -1
+2026-09-13T18:19:54.145-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 127 con tipo no valido: -1
+2026-09-13T18:19:54.147-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 129 con tipo no valido: -1
+2026-09-13T18:19:54.147-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 111 con tipo no valido: -1
+2026-09-13T18:19:54.148-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 120 con tipo no valido: -1
+2026-09-13T18:19:54.149-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: -1
+2026-09-13T18:19:54.145-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 146 con tipo no valido: unknown
+2026-09-13T18:19:54.146-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 112 con tipo no valido: -1
+2026-09-13T18:19:54.147-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 105 con tipo no valido: -1
+2026-09-13T18:19:54.149-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 132 con tipo no valido: -1
+2026-09-13T18:19:54.149-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 147 con tipo no valido: -1
+2026-09-13T18:19:54.150-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 126 con tipo no valido: -1
+2026-09-13T18:19:54.213-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 110 con tipo no valido: -1
+2026-09-13T18:19:54.215-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 117 con tipo no valido: unknown
+2026-09-13T18:19:54.215-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 128 con tipo no valido: -1
+2026-09-13T18:19:54.217-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 103 con tipo no valido: unknown
+2026-09-13T18:19:54.218-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 137 con tipo no valido: -1
+2026-09-13T18:19:54.214-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 107 con tipo no valido: -1
+2026-09-13T18:19:54.219-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 116 con tipo no valido: unknown
+2026-09-13T18:19:54.219-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 129 con tipo no valido: -1
+2026-09-13T18:19:54.215-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 134 con tipo no valido: -1
+2026-09-13T18:19:54.215-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 106 con tipo no valido: -1
+2026-09-13T18:19:54.221-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 110 con tipo no valido: -1
+2026-09-13T18:19:54.218-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 130 con tipo no valido: -1
+2026-09-13T18:19:54.222-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 107 con tipo no valido: -1
+2026-09-13T18:19:54.223-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 113 con tipo no valido: -1
+2026-09-13T18:19:54.224-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: -1
+2026-09-13T18:19:54.225-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 143 con tipo no valido: -1
+2026-09-13T18:19:54.220-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 138 con tipo no valido: -1
+2026-09-13T18:19:54.221-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 139 con tipo no valido: -1
+2026-09-13T18:19:54.221-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 142 con tipo no valido: -1
+2026-09-13T18:19:54.397-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 103 con tipo no valido: -1
+2026-09-13T18:19:54.399-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 144 con tipo no valido: unknown
+2026-09-13T18:19:54.400-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: unknown
+2026-09-13T18:19:54.400-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 150 con tipo no valido: -1
+2026-09-13T18:19:54.401-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 125 con tipo no valido: -1
+2026-09-13T18:19:54.402-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 123 con tipo no valido: unknown
+2026-09-13T18:19:54.403-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 138 con tipo no valido: -1
+2026-09-13T18:19:54.404-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 103 con tipo no valido: -1
+2026-09-13T18:19:54.405-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 145 con tipo no valido: -1
+2026-09-13T18:19:54.405-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 138 con tipo no valido: unknown
+2026-09-13T18:19:54.406-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 131 con tipo no valido: -1
+2026-09-13T18:19:54.407-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 146 con tipo no valido: -1
+2026-09-13T18:19:54.408-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 119 con tipo no valido: unknown
+2026-09-13T18:19:54.408-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 112 con tipo no valido: unknown
+2026-09-13T18:19:54.408-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 137 con tipo no valido: -1
+2026-09-13T18:19:54.409-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 127 con tipo no valido: unknown
+2026-09-13T18:19:54.409-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 109 con tipo no valido: -1
+2026-09-13T18:19:54.411-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 131 con tipo no valido: -1
+2026-09-13T18:19:54.411-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 139 con tipo no valido: unknown
+2026-09-13T18:19:54.412-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 108 con tipo no valido: unknown
+2026-09-13T18:19:54.491-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 143 con tipo no valido: -1
+2026-09-13T18:19:54.491-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 137 con tipo no valido: -1
+2026-09-13T18:19:54.494-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 143 con tipo no valido: unknown
+2026-09-13T18:19:54.496-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 121 con tipo no valido: -1
+2026-09-13T18:19:54.497-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 116 con tipo no valido: -1
+2026-09-13T18:19:54.499-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 127 con tipo no valido: -1
+2026-09-13T18:19:54.500-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 115 con tipo no valido: -1
+2026-09-13T18:19:54.501-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 135 con tipo no valido: -1
+2026-09-13T18:19:54.502-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 132 con tipo no valido: -1
+2026-09-13T18:19:54.503-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 104 con tipo no valido: -1
+2026-09-13T18:19:54.505-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 124 con tipo no valido: -1
+2026-09-13T18:19:54.506-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 131 con tipo no valido: -1
+2026-09-13T18:19:54.539-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 134 con tipo no valido: -1
+2026-09-13T18:19:54.539-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: unknown
+2026-09-13T18:19:54.540-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 133 con tipo no valido: -1
+2026-09-13T18:19:54.541-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 144 con tipo no valido: -1
+2026-09-13T18:19:54.542-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 134 con tipo no valido: -1
+2026-09-13T18:19:54.543-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 117 con tipo no valido: -1
+2026-09-13T18:19:54.543-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 131 con tipo no valido: -1
+2026-09-13T18:19:54.544-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 126 con tipo no valido: -1
+2026-09-13T18:19:54.546-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 149 con tipo no valido: -1
+2026-09-13T18:19:54.547-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 104 con tipo no valido: -1
+2026-09-13T18:19:54.548-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 116 con tipo no valido: unknown
+2026-09-13T18:19:54.549-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 135 con tipo no valido: -1
+2026-09-13T18:19:54.549-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 142 con tipo no valido: unknown
+2026-09-13T18:19:54.550-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 134 con tipo no valido: -1
+2026-09-13T18:19:54.551-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 104 con tipo no valido: -1
+2026-09-13T18:19:54.552-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 106 con tipo no valido: -1
+2026-09-13T18:19:54.553-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 149 con tipo no valido: -1
+2026-09-13T18:19:54.554-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 112 con tipo no valido: -1
+2026-09-13T18:19:54.570-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 102 con tipo no valido: -1
+2026-09-13T18:19:54.570-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 131 con tipo no valido: -1
+2026-09-13T18:19:54.570-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 137 con tipo no valido: -1
+2026-09-13T18:19:54.571-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 124 con tipo no valido: -1
+2026-09-13T18:19:54.572-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: -1
+2026-09-13T18:19:54.572-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 104 con tipo no valido: unknown
+2026-09-13T18:19:54.572-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 130 con tipo no valido: -1
+2026-09-13T18:19:54.579-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 113 con tipo no valido: -1
+2026-09-13T18:19:54.572-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 139 con tipo no valido: unknown
+2026-09-13T18:19:54.573-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 128 con tipo no valido: -1
+2026-09-13T18:19:54.579-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 140 con tipo no valido: -1
+2026-09-13T18:19:54.579-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 139 con tipo no valido: -1
+2026-09-13T18:19:54.579-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 147 con tipo no valido: unknown
+2026-09-13T18:19:54.580-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 105 con tipo no valido: -1
+2026-09-13T18:19:54.580-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 106 con tipo no valido: -1
+2026-09-13T18:19:54.581-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 137 con tipo no valido: -1
+2026-09-13T18:19:54.580-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 137 con tipo no valido: -1
+2026-09-13T18:19:54.580-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 107 con tipo no valido: -1
+2026-09-13T18:19:54.603-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 142 con tipo no valido: -1
+2026-09-13T18:19:54.604-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 116 con tipo no valido: -1
+2026-09-13T18:19:54.605-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 116 con tipo no valido: -1
+2026-09-13T18:19:54.605-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 125 con tipo no valido: unknown
+2026-09-13T18:19:54.606-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 138 con tipo no valido: unknown
+2026-09-13T18:19:54.604-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 136 con tipo no valido: -1
+2026-09-13T18:19:54.607-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 148 con tipo no valido: -1
+2026-09-13T18:19:54.604-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 104 con tipo no valido: -1
+2026-09-13T18:19:54.604-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 127 con tipo no valido: -1
+2026-09-13T18:19:54.608-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 144 con tipo no valido: -1
+2026-09-13T18:19:54.606-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 103 con tipo no valido: -1
+2026-09-13T18:19:54.608-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 109 con tipo no valido: -1
+2026-09-13T18:19:54.608-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 103 con tipo no valido: -1
+2026-09-13T18:19:54.608-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 134 con tipo no valido: -1
+2026-09-13T18:19:54.671-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 106 con tipo no valido: -1
+2026-09-13T18:19:54.673-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 131 con tipo no valido: unknown
+2026-09-13T18:19:54.674-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 124 con tipo no valido: unknown
+2026-09-13T18:19:54.676-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: -1
+2026-09-13T18:19:54.676-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 124 con tipo no valido: -1
+2026-09-13T18:19:54.676-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 127 con tipo no valido: -1
+2026-09-13T18:19:54.678-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 108 con tipo no valido: -1
+2026-09-13T18:19:54.679-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 136 con tipo no valido: -1
+2026-09-13T18:19:54.680-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 123 con tipo no valido: unknown
+2026-09-13T18:19:54.682-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 140 con tipo no valido: unknown
+2026-09-13T18:19:54.683-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 110 con tipo no valido: -1
+2026-09-13T18:19:54.684-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 142 con tipo no valido: -1
+2026-09-13T18:19:54.685-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 111 con tipo no valido: -1
+2026-09-13T18:19:54.685-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 107 con tipo no valido: -1
+2026-09-13T18:19:54.686-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 144 con tipo no valido: unknown
+2026-09-13T18:19:54.687-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 122 con tipo no valido: -1
+2026-09-13T18:19:54.735-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 110 con tipo no valido: -1
+2026-09-13T18:19:54.736-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 148 con tipo no valido: -1
+2026-09-13T18:19:54.737-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 106 con tipo no valido: -1
+2026-09-13T18:19:54.738-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 143 con tipo no valido: -1
+2026-09-13T18:19:54.739-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 109 con tipo no valido: -1
+2026-09-13T18:19:54.740-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 139 con tipo no valido: unknown
+2026-09-13T18:19:54.740-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 150 con tipo no valido: -1
+2026-09-13T18:19:54.742-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 144 con tipo no valido: -1
+2026-09-13T18:19:54.743-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 116 con tipo no valido: -1
+2026-09-13T18:19:54.744-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 139 con tipo no valido: -1
+2026-09-13T18:19:54.744-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 138 con tipo no valido: -1
+2026-09-13T18:19:54.746-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 123 con tipo no valido: unknown
+2026-09-13T18:19:54.747-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 145 con tipo no valido: -1
+2026-09-13T18:19:54.758-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 145 con tipo no valido: -1
+2026-09-13T18:19:54.759-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 145 con tipo no valido: unknown
+2026-09-13T18:19:54.760-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 128 con tipo no valido: -1
+2026-09-13T18:19:54.762-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: -1
+2026-09-13T18:19:54.762-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 119 con tipo no valido: -1
+2026-09-13T18:19:54.763-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 107 con tipo no valido: -1
+2026-09-13T18:19:54.782-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 117 con tipo no valido: -1
+2026-09-13T18:19:54.786-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 125 con tipo no valido: -1
+2026-09-13T18:19:54.968-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 120 con tipo no valido: -1
+2026-09-13T18:19:54.968-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 101 con tipo no valido: -1
+2026-09-13T18:19:54.969-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 121 con tipo no valido: -1
+2026-09-13T18:19:54.971-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 108 con tipo no valido: -1
+2026-09-13T18:19:54.971-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 134 con tipo no valido: -1
+2026-09-13T18:19:54.972-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 138 con tipo no valido: -1
+2026-09-13T18:19:54.972-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 147 con tipo no valido: -1
+2026-09-13T18:19:54.976-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 111 con tipo no valido: -1
+2026-09-13T18:19:55.015-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 106 con tipo no valido: -1
+2026-09-13T18:19:55.016-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 108 con tipo no valido: unknown
+2026-09-13T18:19:55.033-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 113 con tipo no valido: -1
+2026-09-13T18:19:55.034-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 135 con tipo no valido: unknown
+2026-09-13T18:19:55.034-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 110 con tipo no valido: -1
+2026-09-13T18:19:55.033-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 146 con tipo no valido: -1
+2026-09-13T18:19:55.034-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 109 con tipo no valido: -1
+2026-09-13T18:19:55.035-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 108 con tipo no valido: -1
+2026-09-13T18:19:55.034-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 102 con tipo no valido: -1
+2026-09-13T18:19:55.035-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 145 con tipo no valido: -1
+2026-09-13T18:19:55.036-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 147 con tipo no valido: -1
+2026-09-13T18:19:55.036-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 143 con tipo no valido: -1
+2026-09-13T18:19:55.126-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 105 con tipo no valido: -1
+2026-09-13T18:19:55.127-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 142 con tipo no valido: -1
+2026-09-13T18:19:55.128-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 126 con tipo no valido: -1
+2026-09-13T18:19:55.129-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 113 con tipo no valido: -1
+2026-09-13T18:19:55.036-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 127 con tipo no valido: -1
+2026-09-13T18:19:55.036-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 121 con tipo no valido: -1
+2026-09-13T18:19:55.037-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 146 con tipo no valido: -1
+2026-09-13T18:19:55.152-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 115 con tipo no valido: -1
+2026-09-13T18:19:55.153-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 139 con tipo no valido: unknown
+2026-09-13T18:19:55.154-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 147 con tipo no valido: -1
+2026-09-13T18:19:55.152-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 131 con tipo no valido: -1
+2026-09-13T18:19:55.153-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 126 con tipo no valido: -1
+2026-09-13T18:19:55.153-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 136 con tipo no valido: -1
+2026-09-13T18:19:55.154-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 143 con tipo no valido: -1
+2026-09-13T18:19:55.154-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 111 con tipo no valido: -1
+2026-09-13T18:19:55.155-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 121 con tipo no valido: -1
+2026-09-13T18:19:55.155-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 107 con tipo no valido: -1
+2026-09-13T18:19:55.156-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 114 con tipo no valido: -1
+2026-09-13T18:19:55.155-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 116 con tipo no valido: -1
+2026-09-13T18:19:55.155-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 101 con tipo no valido: -1
+2026-09-13T18:19:55.156-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 141 con tipo no valido: -1
+2026-09-13T18:19:55.157-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 105 con tipo no valido: -1
+2026-09-13T18:19:55.156-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 129 con tipo no valido: -1
+2026-09-13T18:19:55.156-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 108 con tipo no valido: -1
+2026-09-13T18:19:55.157-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 149 con tipo no valido: -1
+2026-09-13T18:19:55.205-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 113 con tipo no valido: -1
+2026-09-13T18:19:55.208-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 132 con tipo no valido: -1
+2026-09-13T18:19:55.209-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 130 con tipo no valido: unknown
+2026-09-13T18:19:55.210-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 102 con tipo no valido: -1
+2026-09-13T18:19:55.213-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-3] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 107 con tipo no valido: unknown
+2026-09-13T18:19:55.214-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 129 con tipo no valido: -1
+2026-09-13T18:19:55.221-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 133 con tipo no valido: -1
+2026-09-13T18:19:55.225-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 127 con tipo no valido: -1
+2026-09-13T18:19:55.228-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 135 con tipo no valido: -1
+2026-09-13T18:19:55.229-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 119 con tipo no valido: -1
+2026-09-13T18:19:55.231-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-2] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 129 con tipo no valido: -1
+2026-09-13T18:19:55.231-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-4] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 116 con tipo no valido: -1
+2026-09-13T18:19:55.232-03:00  WARN 24192 --- [bff-mobile] [ batch-worker-1] c.d.b.p.listener.CountingSkipListener    : [SKIP-PROCESS] DataValidationException - Cuenta 139 con tipo no valido: -1
+2026-09-13T18:19:55.268-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.config.JobExecutionLogger        : ===== FIN STEP 'stepCalcularIntereses' => leidos=1000, escritos=669, saltados=331, status=COMPLETED =====
+2026-09-13T18:19:55.400-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 128 (Diana Prince) -> saldoFinal=101828.00 interesAcumulado=1828.00
+2026-09-13T18:19:55.402-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 129 (Steve Rogers) -> saldoFinal=103005.00 interesAcumulado=2005.00
+2026-09-13T18:19:55.404-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 130 (Diana Prince) -> saldoFinal=75303.00 interesAcumulado=1303.00
+2026-09-13T18:19:55.406-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 131 (Alice Brown) -> saldoFinal=22415.00 interesAcumulado=415.00
+2026-09-13T18:19:55.408-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 132 (Jane Smith) -> saldoFinal=117889.00 interesAcumulado=1889.00
+2026-09-13T18:19:55.409-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 133 (Alice Brown) -> saldoFinal=142699.00 interesAcumulado=2699.00
+2026-09-13T18:19:55.411-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 134 (Alice Brown) -> saldoFinal=122235.00 interesAcumulado=2235.00
+2026-09-13T18:19:55.412-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 135 (Alice Brown) -> saldoFinal=95920.00 interesAcumulado=1920.00
+2026-09-13T18:19:55.414-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 136 (Steve Rogers) -> saldoFinal=61031.00 interesAcumulado=1031.00
+2026-09-13T18:19:55.417-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 137 (Bob Johnson) -> saldoFinal=100535.00 interesAcumulado=1535.00
+2026-09-13T18:19:55.418-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 138 (John Doe) -> saldoFinal=103928.00 interesAcumulado=1928.00
+2026-09-13T18:19:55.420-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 139 (Bob Johnson) -> saldoFinal=45691.00 interesAcumulado=691.00
+2026-09-13T18:19:55.421-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 140 (Steve Rogers) -> saldoFinal=109959.00 interesAcumulado=1959.00
+2026-09-13T18:19:55.423-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 141 (Unknown) -> saldoFinal=103998.00 interesAcumulado=1998.00
+2026-09-13T18:19:55.425-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 142 (John Doe) -> saldoFinal=78300.00 interesAcumulado=1300.00
+2026-09-13T18:19:55.426-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 143 (Steve Rogers) -> saldoFinal=80334.00 interesAcumulado=1334.00
+2026-09-13T18:19:55.428-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 144 (Alice Brown) -> saldoFinal=66271.00 interesAcumulado=1271.00
+2026-09-13T18:19:55.429-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 145 (Charlie Green) -> saldoFinal=76264.00 interesAcumulado=1264.00
+2026-09-13T18:19:55.431-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 146 (Steve Rogers) -> saldoFinal=55702.00 interesAcumulado=702.00
+2026-09-13T18:19:55.432-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 147 (Alice Brown) -> saldoFinal=81291.00 interesAcumulado=1291.00
+2026-09-13T18:19:55.434-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 148 (John Doe) -> saldoFinal=72214.00 interesAcumulado=1214.00
+2026-09-13T18:19:55.436-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 149 (Bob Johnson) -> saldoFinal=100926.00 interesAcumulado=1926.00
+2026-09-13T18:19:55.437-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 150 (Charlie Green) -> saldoFinal=92506.00 interesAcumulado=1506.00
+2026-09-13T18:19:55.439-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 101 (Diana Prince) -> saldoFinal=126968.00 interesAcumulado=1968.00
+2026-09-13T18:19:55.440-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 102 (Alice Brown) -> saldoFinal=119931.00 interesAcumulado=1931.00
+2026-09-13T18:19:55.444-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 103 (Alice Brown) -> saldoFinal=39785.00 interesAcumulado=785.00
+2026-09-13T18:19:55.446-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 104 (Jane Smith) -> saldoFinal=84569.00 interesAcumulado=1569.00
+2026-09-13T18:19:55.447-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 105 (Diana Prince) -> saldoFinal=105069.00 interesAcumulado=2069.00
+2026-09-13T18:19:55.449-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 106 (Jane Smith) -> saldoFinal=121140.00 interesAcumulado=2140.00
+2026-09-13T18:19:55.450-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 107 (Alice Brown) -> saldoFinal=136264.00 interesAcumulado=2264.00
+2026-09-13T18:19:55.452-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 108 (Jane Smith) -> saldoFinal=98906.00 interesAcumulado=1906.00
+2026-09-13T18:19:55.453-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 109 (Charlie Green) -> saldoFinal=59994.00 interesAcumulado=994.00
+2026-09-13T18:19:55.454-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 110 (Jane Smith) -> saldoFinal=78328.00 interesAcumulado=1328.00
+2026-09-13T18:19:55.456-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 111 (Diana Prince) -> saldoFinal=97504.00 interesAcumulado=1504.00
+2026-09-13T18:19:55.457-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 112 (Steve Rogers) -> saldoFinal=64001.00 interesAcumulado=1001.00
+2026-09-13T18:19:55.458-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 113 (Charlie Green) -> saldoFinal=99526.00 interesAcumulado=1526.00
+2026-09-13T18:19:55.460-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 114 (Steve Rogers) -> saldoFinal=85294.00 interesAcumulado=1294.00
+2026-09-13T18:19:55.461-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 115 (Steve Rogers) -> saldoFinal=88431.00 interesAcumulado=1431.00
+2026-09-13T18:19:55.462-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 116 (Diana Prince) -> saldoFinal=83377.00 interesAcumulado=1377.00
+2026-09-13T18:19:55.464-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 117 (Steve Rogers) -> saldoFinal=74249.00 interesAcumulado=1249.00
+2026-09-13T18:19:55.466-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 118 (John Doe) -> saldoFinal=102744.00 interesAcumulado=1744.00
+2026-09-13T18:19:55.467-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 119 (Diana Prince) -> saldoFinal=70131.00 interesAcumulado=1131.00
+2026-09-13T18:19:55.469-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 120 (Unknown) -> saldoFinal=55943.00 interesAcumulado=943.00
+2026-09-13T18:19:55.470-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 121 (Steve Rogers) -> saldoFinal=90263.00 interesAcumulado=1263.00
+2026-09-13T18:19:55.532-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 122 (Bob Johnson) -> saldoFinal=150393.00 interesAcumulado=2393.00
+2026-09-13T18:19:55.535-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 123 (Diana Prince) -> saldoFinal=153460.00 interesAcumulado=2460.00
+2026-09-13T18:19:55.536-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 124 (Bob Johnson) -> saldoFinal=96527.00 interesAcumulado=1527.00
+2026-09-13T18:19:55.537-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 125 (Steve Rogers) -> saldoFinal=34700.00 interesAcumulado=700.00
+2026-09-13T18:19:55.539-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 126 (Bob Johnson) -> saldoFinal=91742.00 interesAcumulado=1742.00
+2026-09-13T18:19:55.540-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.InteresService           : Cuenta 127 (Bob Johnson) -> saldoFinal=70076.00 interesAcumulado=1076.00
+2026-09-13T18:19:55.554-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.config.BatchDataInitializer      : < FIN 'jobCalcularIntereses' => status=COMPLETED, exitStatus=exitCode=COMPLETED;exitDescription=;exitException=null
+2026-09-13T18:19:55.555-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.config.BatchDataInitializer      : > EJECUTANDO JOB 3: GENERACION DE ESTADOS DE CUENTA ANUALES ...
+2026-09-13T18:19:57.309-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.config.JobExecutionLogger        : ===== FIN STEP 'stepProcesarCuentasAnuales' => leidos=1000, escritos=1000, saltados=0, status=COMPLETED =====
+2026-09-13T18:19:57.361-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 103 -> movimientos=41 depositos=8800.00 retiros=14500.00 compras=41600.00 pagos=4000.00 saldoFinal=-43300.00
+2026-09-13T18:19:57.363-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 110 -> movimientos=47 depositos=18400.00 retiros=15100.00 compras=15500.00 pagos=6000.00 saldoFinal=-6200.00
+2026-09-13T18:19:57.365-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 109 -> movimientos=49 depositos=39900.00 retiros=22400.00 compras=12300.00 pagos=-500.00 saldoFinal=4700.00
+2026-09-13T18:19:57.366-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 105 -> movimientos=60 depositos=23900.00 retiros=22800.00 compras=14600.00 pagos=6500.00 saldoFinal=-7000.00
+2026-09-13T18:19:57.368-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 120 -> movimientos=39 depositos=19500.00 retiros=19400.00 compras=15400.00 pagos=1000.00 saldoFinal=-14300.00
+2026-09-13T18:19:57.369-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 102 -> movimientos=55 depositos=22800.00 retiros=20600.00 compras=21200.00 pagos=6000.00 saldoFinal=-13000.00
+2026-09-13T18:19:57.371-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 111 -> movimientos=46 depositos=30400.00 retiros=26900.00 compras=16700.00 pagos=1500.00 saldoFinal=-11700.00
+2026-09-13T18:19:57.372-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 106 -> movimientos=59 depositos=26700.00 retiros=15000.00 compras=35800.00 pagos=3400.00 saldoFinal=-20700.00
+2026-09-13T18:19:57.374-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 108 -> movimientos=52 depositos=13800.00 retiros=33700.00 compras=22300.00 pagos=-600.00 saldoFinal=-42800.00
+2026-09-13T18:19:57.375-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 104 -> movimientos=54 depositos=14700.00 retiros=20200.00 compras=26800.00 pagos=1500.00 saldoFinal=-30800.00
+2026-09-13T18:19:57.376-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 116 -> movimientos=58 depositos=39100.00 retiros=28400.00 compras=23900.00 pagos=1500.00 saldoFinal=-11700.00
+2026-09-13T18:19:57.378-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 114 -> movimientos=59 depositos=21300.00 retiros=32000.00 compras=30500.00 pagos=-500.00 saldoFinal=-41700.00
+2026-09-13T18:19:57.379-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 119 -> movimientos=49 depositos=23400.00 retiros=13400.00 compras=34500.00 pagos=3000.00 saldoFinal=-21500.00
+2026-09-13T18:19:57.380-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 117 -> movimientos=42 depositos=24300.00 retiros=19800.00 compras=16400.00 pagos=4500.00 saldoFinal=-7400.00
+2026-09-13T18:19:57.382-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 113 -> movimientos=39 depositos=20400.00 retiros=13400.00 compras=16700.00 pagos=5000.00 saldoFinal=-4700.00
+2026-09-13T18:19:57.383-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 118 -> movimientos=53 depositos=30700.00 retiros=25900.00 compras=28300.00 pagos=1500.00 saldoFinal=-22000.00
+2026-09-13T18:19:57.385-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 112 -> movimientos=49 depositos=27500.00 retiros=24300.00 compras=19900.00 pagos=1400.00 saldoFinal=-15300.00
+2026-09-13T18:19:57.386-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 107 -> movimientos=60 depositos=24100.00 retiros=26800.00 compras=20900.00 pagos=4000.00 saldoFinal=-19600.00
+2026-09-13T18:19:57.388-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 115 -> movimientos=43 depositos=14400.00 retiros=6700.00 compras=25900.00 pagos=2900.00 saldoFinal=-15300.00
+2026-09-13T18:19:57.390-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.service.EstadoCuentaService      : Cuenta 101 -> movimientos=46 depositos=36000.00 retiros=8200.00 compras=11300.00 pagos=1400.00 saldoFinal=17900.00
+2026-09-13T18:19:57.398-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.config.BatchDataInitializer      : < FIN 'jobEstadosCuentaAnuales' => status=COMPLETED, exitStatus=exitCode=COMPLETED;exitDescription=;exitException=null
+2026-09-13T18:19:57.399-03:00  INFO 24192 --- [bff-mobile] [           main] c.d.b.p.config.BatchDataInitializer      : ==================== FIN CARGA DE DATOS: BFF LISTO PARA SERVIR API =============

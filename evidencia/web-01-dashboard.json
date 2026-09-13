@@ -1,0 +1,2 @@
+﻿{"bff":"web","datos":{"resumen_diario":{"fechaProceso":"2026-09-13T18:19:54.167119","id":1,"montoTotal":512400.00,"montoTotalCreditos":251000.00,"montoTotalDebitos":261400.00,"totalAnomalias":90,"totalCreditos":250,"totalDebitos":241,"totalTransacciones":491},"total_cuentas":50,"movimientos_anuales":1000},"endpoint":"/api/web/dashboard","mensaje":null,"total":1}
+[HTTP 200 | tiempo 0.190146s | tamano 364 bytes]

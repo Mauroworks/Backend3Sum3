@@ -1,0 +1,2 @@
+﻿[{"fecha":"2024-12-26","tipo":"deposito","monto":-100.00},{"fecha":"2024-12-22","tipo":"deposito","monto":2500.00},{"fecha":"2024-11-24","tipo":"deposito","monto":-100.00},{"fecha":"2024-11-23","tipo":"compra","monto":1500.00},{"fecha":"2024-11-22","tipo":"retiro","monto":1000.00}]
+[HTTP 200 | tiempo 0.156622s | tamano 282 bytes]

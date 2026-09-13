@@ -1,0 +1,2 @@
+﻿{"bff":"web","datos":{"por_tipo":{"debito":241,"credito":250},"por_estado":{"ANOMALIA_CERO":9,"OK":401,"ANOMALIA_NEGATIVO":81},"por_transaccion_cuenta_anual":{"compra":314,"deposito":348,"retiro":296,"pago":42}},"endpoint":"/api/web/estadisticas","mensaje":null,"total":1}
+[HTTP 200 | tiempo 0.191732s | tamano 272 bytes]

@@ -1,0 +1,2 @@
+﻿{"tipo":"RETIRO","aprobado":true,"cuenta_id":137,"nombre":"Bob Johnson","monto_retirado":5000,"saldo_anterior":100535.00,"saldo_nuevo":95535.00,"transaccion_id":1001,"fecha":"2026-09-13T19:36:26.263020","ticket":"TKT-ATM-001-RT-1789338986263"}
+[HTTP 200 | tiempo 0.176011s | tamano 243 bytes]
