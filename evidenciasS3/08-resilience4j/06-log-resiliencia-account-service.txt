@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 3 - trazas de retry y circuit breaker en account-service
+FECHA  : 2026-10-05 23:00:09
+==============================================================================
+
+2026-10-05T22:58:47.355-03:00  INFO 15564 --- [account-service] [container-0-C-1] c.d.account.client.ServiceTokenProvider  : [OAUTH2] token de servicio obtido para clientId=service-account scope=read expiraEn=600s
+2026-10-05T22:58:47.356-03:00  INFO 15564 --- [account-service] [container-0-C-1] c.d.account.client.CsvResultApiClient    : [CLIENTE] consultando csv-result-api: http://localhost:8085/api/migracion/resultados?sagaId=SAGA-F9BF7DD5 (con token de servicio: true)
+2026-10-05T22:58:48.341-03:00  INFO 15564 --- [account-service] [container-0-C-1] c.d.account.client.CsvResultApiClient    : [CLIENTE] filas recibidas de csv-result-api: 3000

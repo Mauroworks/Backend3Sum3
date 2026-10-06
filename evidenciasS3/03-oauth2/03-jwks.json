@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 6 - llaves publicas JWKS para validar el JWT
+FECHA  : 2026-10-05 22:56:34
+COMANDO: curl.exe -s http://localhost:9000/oauth2/jwks
+==============================================================================
+
+{"keys":[{"kty":"RSA","e":"AQAB","kid":"13b2b6a1-3b29-4be3-879a-bb0673d337e2","n":"rKT3mceqnn1-0z6zApBrqHYk3kZAp7DSRgTrCDZVtB_w3FNMicE0QaDCXW0bUIKyYppFRxM9oZPoS49AJVQP-SKw61k2zFKxSG8nr8tAPF5yUMm1rMcbyw4mWfU_b-H3rh3AawJWjvTSeZhU7GApSPc3DxaKgpU7RPyNBZb8Hh-01u9OdZbIVmMEyv00SfFBxM1HA2AxrjLOfnUYPJVbGsp8NYxoRWeN6O-_2V1KgYopK8VVcuZTWl3zAgXHulkcxBhTdVb_bJa1CVkCbvXakon3HTb6LDrZJIqs8de0LEp7FEEVsgEzQV_GM8a_77tP420lt5zyGboMOtbb78RXHQ"}]}
+

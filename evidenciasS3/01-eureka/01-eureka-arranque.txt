@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 2 - Service Discovery: Eureka Server arriba (log de arranque)
+FECHA  : 2026-10-05 22:55:34
+==============================================================================
+
+[INFO] Building eureka-server 0.0.1-SNAPSHOT
+2026-10-05T22:55:27.619-03:00  INFO 14268 --- [eureka-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8761 (http) with context path '/'
+2026-10-05T22:55:27.647-03:00  INFO 14268 --- [eureka-server] [           main] c.duoc.eureka.EurekaServerApplication    : Started EurekaServerApplication in 7.295 seconds (process running for 8.493)

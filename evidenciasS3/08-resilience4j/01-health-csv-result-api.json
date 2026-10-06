@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 3 - Actuator health con Resilience4j (circuit breaker UP)
+FECHA  : 2026-10-05 23:00:01
+COMANDO: curl.exe -s http://localhost:8085/actuator/health
+==============================================================================
+
+{"components":{"binders":{"components":{"kafka":{"details":{"topicsInUse":["saga.banco.xyz"]},"status":"UP"}},"status":"UP"},"clientConfigServer":{"details":{"propertySources":["configserver:classpath:/config/csv-result-api.yml","configserver:classpath:/config/comun.yml","configClient"]},"status":"UP"},"db":{"details":{"database":"H2","validationQuery":"isValid()"},"status":"UP"},"discoveryComposite":{"components":{"discoveryClient":{"details":{"services":["auth-server","config-server","csv-result-api","account-service","reporting-service"]},"status":"UP"},"eureka":{"details":{"applications":{"AUTH-SERVER":1,"ACCOUNT-SERVICE":1,"REPORTING-SERVICE":1,"CSV-RESULT-API":1,"CONFIG-SERVER":1}},"description":"Remote status from Eureka server","status":"UP"}},"status":"UP"},"diskSpace":{"details":{"total":511437996032,"free":88675520512,"threshold":10485760,"path":"C:\\Users\\Mauricio\\Desktop\\Programaci├│n\\CARRERA DESARROLLO APLICACIONES DUOC UC\\BACKEND3\\procesadorf1\\csv-result-api\\.","exists":true},"status":"UP"},"livenessState":{"status":"UP"},"ping":{"status":"UP"},"readinessState":{"status":"UP"},"refreshScope":{"status":"UP"},"ssl":{"details":{"expiringChains":[],"invalidChains":[],"validChains":[]},"status":"UP"}},"groups":["liveness","readiness"],"status":"UP"}
+

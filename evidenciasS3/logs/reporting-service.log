@@ -1,0 +1,972 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.duoc.batch:reporting-service >------------------
+[INFO] Building reporting-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.7:run (default-cli) > test-compile @ reporting-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ reporting-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ reporting-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ reporting-service ---
+[INFO] skip non existing resourceDirectory C:\Users\Mauricio\Desktop\Programaci�n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\reporting-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ reporting-service ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:4.0.7:run (default-cli) < test-compile @ reporting-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.7:run (default-cli) @ reporting-service ---
+[INFO] Attaching agents: []
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ 
+ :: Spring Boot ::   v4.0.7
+ :: Spring Cloud Stream ::   v5.0.3
+ :: Spring Cloud Function ::   v5.0.4
+2026-10-05T22:58:03.348-03:00  INFO 12692 --- [reporting-service] [           main] c.d.r.ReportingServiceApplication        : Starting ReportingServiceApplication using Java 25 with PID 12692 (C:\Users\Mauricio\Desktop\Programación\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\reporting-service\target\classes started by Mauricio in C:\Users\Mauricio\Desktop\Programación\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\reporting-service)
+2026-10-05T22:58:03.354-03:00  INFO 12692 --- [reporting-service] [           main] c.d.r.ReportingServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-10-05T22:58:03.452-03:00  INFO 12692 --- [reporting-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-10-05T22:58:03.452-03:00  INFO 12692 --- [reporting-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=comun,reporting-service, profiles=[default], label=null, version=null, state=null
+2026-10-05T22:58:05.666-03:00  INFO 12692 --- [reporting-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05T22:58:05.931-03:00  INFO 12692 --- [reporting-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 249 ms. Found 1 JPA repository interface.
+2026-10-05T22:58:06.697-03:00  INFO 12692 --- [reporting-service] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2026-10-05T22:58:06.709-03:00  INFO 12692 --- [reporting-service] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2026-10-05T22:58:06.947-03:00  INFO 12692 --- [reporting-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=288281da-1912-3603-adf9-7e850fde3ea8
+2026-10-05T22:58:08.674-03:00  INFO 12692 --- [reporting-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8092 (http)
+2026-10-05T22:58:08.699-03:00  INFO 12692 --- [reporting-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-05T22:58:08.700-03:00  INFO 12692 --- [reporting-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-10-05T22:58:08.834-03:00  INFO 12692 --- [reporting-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 5377 ms
+2026-10-05T22:58:09.946-03:00  INFO 12692 --- [reporting-service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-05T22:58:10.047-03:00  INFO 12692 --- [reporting-service] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-10-05T22:58:10.971-03:00  INFO 12692 --- [reporting-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05T22:58:11.033-03:00  INFO 12692 --- [reporting-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-05T22:58:11.489-03:00  INFO 12692 --- [reporting-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:reporting user=SA
+2026-10-05T22:58:11.493-03:00  INFO 12692 --- [reporting-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-05T22:58:11.631-03:00  INFO 12692 --- [reporting-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:reporting]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: REPORTING/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-05T22:58:13.292-03:00  INFO 12692 --- [reporting-service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05T22:58:13.361-03:00  INFO 12692 --- [reporting-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T22:58:13.684-03:00  INFO 12692 --- [reporting-service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-05T22:58:15.595-03:00  WARN 12692 --- [reporting-service] [           main] .ContextFunctionCatalogAutoConfiguration : Kotlin is present on the classpath, but the Jackson Kotlin module is not available. Consider adding 'jackson-module-kotlin' to your dependencies to avoid serialization issues with Kotlin classes.
+2026-10-05T22:58:17.604-03:00  INFO 12692 --- [reporting-service] [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'reporting-service.sagaEvents-in-0' has 1 subscriber(s).
+2026-10-05T22:58:19.779-03:00  INFO 12692 --- [reporting-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-10-05T22:58:20.053-03:00  WARN 12692 --- [reporting-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-05T22:58:20.104-03:00  INFO 12692 --- [reporting-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
+2026-10-05T22:58:20.487-03:00  INFO 12692 --- [reporting-service] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2026-10-05T22:58:20.488-03:00  INFO 12692 --- [reporting-service] [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'reporting-service.errorChannel' has 1 subscriber(s).
+2026-10-05T22:58:20.489-03:00  INFO 12692 --- [reporting-service] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2026-10-05T22:58:20.513-03:00  INFO 12692 --- [reporting-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-10-05T22:58:20.573-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-10-05T22:58:20.581-03:00  INFO 12692 --- [reporting-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-05T22:58:20.601-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-10-05T22:58:20.601-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-10-05T22:58:20.602-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-10-05T22:58:20.602-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-10-05T22:58:20.603-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-10-05T22:58:20.604-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-10-05T22:58:20.605-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-10-05T22:58:21.351-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-10-05T22:58:21.354-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-10-05T22:58:21.360-03:00  INFO 12692 --- [reporting-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-05T22:58:21.363-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1791251901362 with initial instances count: 4
+2026-10-05T22:58:21.396-03:00  INFO 12692 --- [reporting-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application REPORTING-SERVICE with eureka with status UP
+2026-10-05T22:58:21.398-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1791251901398, current=UP, previous=STARTING]
+2026-10-05T22:58:21.402-03:00  INFO 12692 --- [reporting-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REPORTING-SERVICE/DESKTOP-JH6RNIL.mshome.net:reporting-service:8092: registering service...
+2026-10-05T22:58:21.402-03:00  INFO 12692 --- [reporting-service] [           main] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: kafka
+2026-10-05T22:58:21.403-03:00  INFO 12692 --- [reporting-service] [           main] o.s.c.s.binder.DefaultBinderFactory      : Constructing binder child context for kafka
+2026-10-05T22:58:21.508-03:00  INFO 12692 --- [reporting-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REPORTING-SERVICE/DESKTOP-JH6RNIL.mshome.net:reporting-service:8092 - registration status: 204
+2026-10-05T22:58:21.673-03:00  INFO 12692 --- [reporting-service] [           main] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: kafka
+2026-10-05T22:58:21.696-03:00  INFO 12692 --- [reporting-service] [           main] o.a.kafka.common.config.AbstractConfig   : AdminClientConfig values: 
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = false
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-10-05T22:58:21.944-03:00  INFO 12692 --- [reporting-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-10-05T22:58:21.944-03:00  INFO 12692 --- [reporting-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-10-05T22:58:21.945-03:00  INFO 12692 --- [reporting-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1791251901942
+2026-10-05T22:58:22.779-03:00  INFO 12692 --- [reporting-service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-10-05T22:58:22.781-03:00  INFO 12692 --- [reporting-service] [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-05T22:58:22.781-03:00  INFO 12692 --- [reporting-service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-10-05T22:58:22.782-03:00  INFO 12692 --- [reporting-service] [| adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2026-10-05T22:58:22.795-03:00  INFO 12692 --- [reporting-service] [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-10-05T22:58:22.796-03:00  INFO 12692 --- [reporting-service] [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-05T22:58:22.796-03:00  INFO 12692 --- [reporting-service] [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-10-05T22:58:22.824-03:00  INFO 12692 --- [reporting-service] [           main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-reporte-consumer-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = reporte-consumer
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2026-10-05T22:58:22.897-03:00  INFO 12692 --- [reporting-service] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-10-05T22:58:22.992-03:00  INFO 12692 --- [reporting-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-10-05T22:58:22.992-03:00  INFO 12692 --- [reporting-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-10-05T22:58:22.993-03:00  INFO 12692 --- [reporting-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1791251902992
+2026-10-05T22:58:23.037-03:00  INFO 12692 --- [reporting-service] [           main] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-reporte-consumer-1, groupId=reporte-consumer] Cluster ID: -X5it8f3Tama6hShN57MCA
+2026-10-05T22:58:23.043-03:00  INFO 12692 --- [reporting-service] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-reporte-consumer-1, groupId=reporte-consumer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-10-05T22:58:23.044-03:00  INFO 12692 --- [reporting-service] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-reporte-consumer-1, groupId=reporte-consumer] Request joining group due to: consumer pro-actively leaving the group
+2026-10-05T22:58:23.051-03:00  INFO 12692 --- [reporting-service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-10-05T22:58:23.051-03:00  INFO 12692 --- [reporting-service] [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-05T22:58:23.054-03:00  INFO 12692 --- [reporting-service] [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-10-05T22:58:23.055-03:00  INFO 12692 --- [reporting-service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-10-05T22:58:23.069-03:00  INFO 12692 --- [reporting-service] [           main] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-reporte-consumer-1 unregistered
+2026-10-05T22:58:23.129-03:00  INFO 12692 --- [reporting-service] [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'kafka-281796497.sagaEvents-in-0.errors' has 1 subscriber(s).
+2026-10-05T22:58:23.131-03:00  INFO 12692 --- [reporting-service] [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'kafka-281796497.sagaEvents-in-0.errors' has 0 subscriber(s).
+2026-10-05T22:58:23.132-03:00  INFO 12692 --- [reporting-service] [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'kafka-281796497.sagaEvents-in-0.errors' has 1 subscriber(s).
+2026-10-05T22:58:23.132-03:00  INFO 12692 --- [reporting-service] [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'kafka-281796497.sagaEvents-in-0.errors' has 2 subscriber(s).
+2026-10-05T22:58:23.163-03:00  INFO 12692 --- [reporting-service] [           main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-reporte-consumer-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = reporte-consumer
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2026-10-05T22:58:23.164-03:00  INFO 12692 --- [reporting-service] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-10-05T22:58:23.172-03:00  INFO 12692 --- [reporting-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-10-05T22:58:23.173-03:00  INFO 12692 --- [reporting-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-10-05T22:58:23.173-03:00  INFO 12692 --- [reporting-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1791251903172
+2026-10-05T22:58:23.181-03:00  INFO 12692 --- [reporting-service] [           main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-reporte-consumer-2, groupId=reporte-consumer] Subscribed to topic(s): saga.banco.xyz
+2026-10-05T22:58:23.193-03:00  INFO 12692 --- [reporting-service] [           main] s.i.k.i.KafkaMessageDrivenChannelAdapter : started org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@6ae6317f
+2026-10-05T22:58:23.227-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-reporte-consumer-2, groupId=reporte-consumer] Cluster ID: -X5it8f3Tama6hShN57MCA
+2026-10-05T22:58:23.232-03:00  INFO 12692 --- [reporting-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8092 (http) with context path '/'
+2026-10-05T22:58:23.233-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-reporte-consumer-2, groupId=reporte-consumer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-10-05T22:58:23.234-03:00  INFO 12692 --- [reporting-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8092
+2026-10-05T22:58:23.238-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-reporte-consumer-2, groupId=reporte-consumer] (Re-)joining group
+2026-10-05T22:58:23.271-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-reporte-consumer-2, groupId=reporte-consumer] Request joining group due to: need to re-join with the given member-id: consumer-reporte-consumer-2-35005761-9bdb-45b8-a66a-dac298ecf448
+2026-10-05T22:58:23.273-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-reporte-consumer-2, groupId=reporte-consumer] (Re-)joining group
+2026-10-05T22:58:23.519-03:00  INFO 12692 --- [reporting-service] [           main] c.d.r.ReportingServiceApplication        : Started ReportingServiceApplication in 22.161 seconds (process running for 23.717)
+2026-10-05T22:58:23.589-03:00  INFO 12692 --- [reporting-service] [nio-8092-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-05T22:58:23.590-03:00  INFO 12692 --- [reporting-service] [nio-8092-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-05T22:58:23.594-03:00  INFO 12692 --- [reporting-service] [nio-8092-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-10-05T22:58:23.681-03:00  INFO 12692 --- [reporting-service] [binder-health-1] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-null-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = null
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2026-10-05T22:58:23.682-03:00  INFO 12692 --- [reporting-service] [binder-health-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-10-05T22:58:23.692-03:00  INFO 12692 --- [reporting-service] [binder-health-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-10-05T22:58:23.692-03:00  INFO 12692 --- [reporting-service] [binder-health-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-10-05T22:58:23.693-03:00  INFO 12692 --- [reporting-service] [binder-health-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1791251903692
+2026-10-05T22:58:23.713-03:00  INFO 12692 --- [reporting-service] [binder-health-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-null-3, groupId=null] Cluster ID: -X5it8f3Tama6hShN57MCA
+2026-10-05T22:58:24.200-03:00  INFO 12692 --- [reporting-service] [pool-5-thread-1] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-reporte-consumer-4
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = reporte-consumer
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2026-10-05T22:58:24.202-03:00  INFO 12692 --- [reporting-service] [pool-5-thread-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-10-05T22:58:24.212-03:00  INFO 12692 --- [reporting-service] [pool-5-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-10-05T22:58:24.213-03:00  INFO 12692 --- [reporting-service] [pool-5-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-10-05T22:58:24.213-03:00  INFO 12692 --- [reporting-service] [pool-5-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1791251904212
+2026-10-05T22:58:24.229-03:00  INFO 12692 --- [reporting-service] [pool-5-thread-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-reporte-consumer-4, groupId=reporte-consumer] Cluster ID: -X5it8f3Tama6hShN57MCA
+2026-10-05T22:58:24.257-03:00  WARN 12692 --- [reporting-service] [pool-5-thread-1] o.a.k.c.c.internals.OffsetFetcherUtils   : [Consumer clientId=consumer-reporte-consumer-4, groupId=reporte-consumer] Not updating high watermark for partition saga.banco.xyz-0 as it is no longer assigned
+2026-10-05T22:58:24.262-03:00  INFO 12692 --- [reporting-service] [pool-5-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-reporte-consumer-4, groupId=reporte-consumer] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null isFenced: false)
+2026-10-05T22:58:24.282-03:00  INFO 12692 --- [reporting-service] [pool-5-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-reporte-consumer-4, groupId=reporte-consumer] Found no committed offset for partition saga.banco.xyz-0
+2026-10-05T22:58:24.288-03:00  WARN 12692 --- [reporting-service] [pool-5-thread-1] o.a.k.c.c.internals.OffsetFetcherUtils   : [Consumer clientId=consumer-reporte-consumer-4, groupId=reporte-consumer] Not updating high watermark for partition saga.banco.xyz-0 as it is no longer assigned
+2026-10-05T22:58:26.285-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-reporte-consumer-2, groupId=reporte-consumer] Successfully joined group with generation Generation{generationId=1, memberId='consumer-reporte-consumer-2-35005761-9bdb-45b8-a66a-dac298ecf448', protocol='range'}
+2026-10-05T22:58:26.299-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-reporte-consumer-2, groupId=reporte-consumer] Finished assignment for group at generation 1: {consumer-reporte-consumer-2-35005761-9bdb-45b8-a66a-dac298ecf448=Assignment(partitions=[saga.banco.xyz-0])}
+2026-10-05T22:58:26.314-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-reporte-consumer-2, groupId=reporte-consumer] Successfully synced group in generation Generation{generationId=1, memberId='consumer-reporte-consumer-2-35005761-9bdb-45b8-a66a-dac298ecf448', protocol='range'}
+2026-10-05T22:58:26.315-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-reporte-consumer-2, groupId=reporte-consumer] Notifying assignor about the new Assignment(partitions=[saga.banco.xyz-0])
+2026-10-05T22:58:26.319-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-reporte-consumer-2, groupId=reporte-consumer] Adding newly assigned partitions: [saga.banco.xyz-0]
+2026-10-05T22:58:26.329-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-reporte-consumer-2, groupId=reporte-consumer] Found no committed offset for partition saga.banco.xyz-0
+2026-10-05T22:58:26.349-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-reporte-consumer-2, groupId=reporte-consumer] Resetting offset for partition saga.banco.xyz-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null isFenced: false)], epoch=0}}.
+2026-10-05T22:58:26.351-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.s.c.s.b.k.KafkaMessageChannelBinder$2  : reporte-consumer: partitions assigned: [saga.banco.xyz-0]
+2026-10-05T22:58:47.093-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] c.d.reporting.event.SagaFunctionConfig   : [SAGA-RECIBIDO] MIGRACION_DATOS_COMPLETADA sagaId=SAGA-F9BF7DD5 filasMigradas=2575 rechazadas=425
+2026-10-05T22:58:47.305-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] c.duoc.reporting.service.ReporteService  : [REPORTE] id=1 sagaId=SAGA-F9BF7DD5 tipo=RESUMEN_MIGRACION totalCuentas=2575 saldoTotal=0
+2026-10-05T22:58:47.355-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.s.c.s.b.k.p.KafkaTopicProvisioner      : Using kafka topic for outbound: saga.banco.xyz
+2026-10-05T22:58:47.357-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.kafka.common.config.AbstractConfig   : AdminClientConfig values: 
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = false
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-10-05T22:58:47.365-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-10-05T22:58:47.366-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-10-05T22:58:47.369-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1791251927365
+2026-10-05T22:58:47.430-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-10-05T22:58:47.432-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-05T22:58:47.432-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-10-05T22:58:47.434-03:00  INFO 12692 --- [reporting-service] [| adminclient-2] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-2 unregistered
+2026-10-05T22:58:47.439-03:00  INFO 12692 --- [reporting-service] [| adminclient-2] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-10-05T22:58:47.439-03:00  INFO 12692 --- [reporting-service] [| adminclient-2] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-05T22:58:47.440-03:00  INFO 12692 --- [reporting-service] [| adminclient-2] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-10-05T22:58:47.453-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.kafka.common.config.AbstractConfig   : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transaction.two.phase.commit.enable = false
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2026-10-05T22:58:47.454-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-10-05T22:58:47.475-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2026-10-05T22:58:47.508-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-10-05T22:58:47.509-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-10-05T22:58:47.510-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1791251927508
+2026-10-05T22:58:47.547-03:00  INFO 12692 --- [reporting-service] [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: -X5it8f3Tama6hShN57MCA
+2026-10-05T22:58:47.551-03:00  INFO 12692 --- [reporting-service] [ad | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1 with epoch 0
+2026-10-05T22:58:47.569-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'reporting-service.sagaEvents-out-0' has 1 subscriber(s).
+2026-10-05T22:58:47.571-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] o.s.c.s.binder.kafka.KafkaBinderMetrics  : Try to shutdown the old scheduler with 1 threads
+2026-10-05T22:58:47.652-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] c.d.reporting.event.SagaFunctionConfig   : [SAGA-PUB] REPORTE_GENERADO publicado
+2026-10-05T22:58:47.760-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] c.d.reporting.event.SagaFunctionConfig   : [SAGA-CIERRE] {"evento":"REPORTE_GENERADO","sagaId":"SAGA-F9BF7DD5","reporte":1,"tipoReporte":"RESUMEN_MIGRACION","totalCuentas":2575,"saldoTotal":0,"fecha":"2026-10-06T01:58:47.325393Z"}
+2026-10-05T22:58:51.858-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] c.d.reporting.event.SagaFunctionConfig   : [SAGA-RECIBIDO] INTERESES_CALCULADOS sagaId=SAGA-F9BF7DD5 cuentas=3000 totalInteres=145411.05
+2026-10-05T22:58:51.861-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] c.duoc.reporting.service.ReporteService  : [REPORTE] id=2 sagaId=SAGA-F9BF7DD5 tipo=ESTADO_CUENTA_ANUAL totalCuentas=3000 saldoTotal=145411.05
+2026-10-05T22:58:51.874-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] c.d.reporting.event.SagaFunctionConfig   : [SAGA-PUB] REPORTE_GENERADO publicado
+2026-10-05T22:58:51.979-03:00  INFO 12692 --- [reporting-service] [container-0-C-1] c.d.reporting.event.SagaFunctionConfig   : [SAGA-CIERRE] {"evento":"REPORTE_GENERADO","sagaId":"SAGA-F9BF7DD5","reporte":2,"tipoReporte":"ESTADO_CUENTA_ANUAL","totalCuentas":3000,"saldoTotal":145411.05,"fecha":"2026-10-06T01:58:51.862010500Z"}
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:23 min
+[INFO] Finished at: 2026-10-05T23:00:15-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.0.7:run (default-cli) on project reporting-service: Process terminated with exit code: -1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

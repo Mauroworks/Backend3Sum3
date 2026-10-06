@@ -1,0 +1,296 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.duoc.batch:procesadorf1 >---------------------
+[INFO] Building procesadorf1 (BFF Banco XYZ) 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ procesadorf1 ---
+[INFO] 
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ procesadorf1 ---
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ procesadorf1 ---
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\pom.xml to C:\Users\Mauricio\.m2\repository\com\duoc\batch\procesadorf1\0.0.1-SNAPSHOT\procesadorf1-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.731 s
+[INFO] Finished at: 2026-10-05T22:47:33-03:00
+[INFO] ------------------------------------------------------------------------
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] saga-contracts                                                     [jar]
+[INFO] config-server                                                      [jar]
+[INFO] eureka-server                                                      [jar]
+[INFO] auth-server                                                        [jar]
+[INFO] csv-result-api                                                     [jar]
+[INFO] account-service                                                    [jar]
+[INFO] reporting-service                                                  [jar]
+[INFO] 
+[INFO] -------------------< com.duoc.batch:saga-contracts >--------------------
+[INFO] Building saga-contracts 0.0.1-SNAPSHOT                             [1/7]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ saga-contracts ---
+[INFO] Deleting C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\saga-contracts\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ saga-contracts ---
+[INFO] skip non existing resourceDirectory C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\saga-contracts\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\saga-contracts\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ saga-contracts ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 5 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ saga-contracts ---
+[INFO] skip non existing resourceDirectory C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\saga-contracts\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ saga-contracts ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ saga-contracts ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ saga-contracts ---
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\saga-contracts\target\saga-contracts-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ saga-contracts ---
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ saga-contracts ---
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\saga-contracts\pom.xml to C:\Users\Mauricio\.m2\repository\com\duoc\batch\saga-contracts\0.0.1-SNAPSHOT\saga-contracts-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\saga-contracts\target\saga-contracts-0.0.1-SNAPSHOT.jar to C:\Users\Mauricio\.m2\repository\com\duoc\batch\saga-contracts\0.0.1-SNAPSHOT\saga-contracts-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --------------------< com.duoc.batch:config-server >--------------------
+[INFO] Building config-server 0.0.1-SNAPSHOT                              [2/7]
+[INFO]   from C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\config-server\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ config-server ---
+[INFO] Deleting C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\config-server\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ config-server ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ config-server ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ config-server ---
+[INFO] skip non existing resourceDirectory C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\config-server\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ config-server ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ config-server ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ config-server ---
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\config-server\target\config-server-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ config-server ---
+[INFO] Replacing main artifact C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\config-server\target\config-server-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\config-server\target\config-server-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ config-server ---
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\config-server\pom.xml to C:\Users\Mauricio\.m2\repository\com\duoc\batch\config-server\0.0.1-SNAPSHOT\config-server-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\config-server\target\config-server-0.0.1-SNAPSHOT.jar to C:\Users\Mauricio\.m2\repository\com\duoc\batch\config-server\0.0.1-SNAPSHOT\config-server-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --------------------< com.duoc.batch:eureka-server >--------------------
+[INFO] Building eureka-server 0.0.1-SNAPSHOT                              [3/7]
+[INFO]   from C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\eureka-server\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ eureka-server ---
+[INFO] Deleting C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\eureka-server\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ eureka-server ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ eureka-server ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ eureka-server ---
+[INFO] skip non existing resourceDirectory C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\eureka-server\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ eureka-server ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ eureka-server ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ eureka-server ---
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\eureka-server\target\eureka-server-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ eureka-server ---
+[INFO] Replacing main artifact C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\eureka-server\target\eureka-server-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\eureka-server\target\eureka-server-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ eureka-server ---
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\eureka-server\pom.xml to C:\Users\Mauricio\.m2\repository\com\duoc\batch\eureka-server\0.0.1-SNAPSHOT\eureka-server-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\eureka-server\target\eureka-server-0.0.1-SNAPSHOT.jar to C:\Users\Mauricio\.m2\repository\com\duoc\batch\eureka-server\0.0.1-SNAPSHOT\eureka-server-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ---------------------< com.duoc.batch:auth-server >---------------------
+[INFO] Building auth-server 0.0.1-SNAPSHOT                                [4/7]
+[INFO]   from C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\auth-server\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ auth-server ---
+[INFO] Deleting C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\auth-server\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ auth-server ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ auth-server ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ auth-server ---
+[INFO] skip non existing resourceDirectory C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\auth-server\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ auth-server ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ auth-server ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ auth-server ---
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\auth-server\target\auth-server-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ auth-server ---
+[INFO] Replacing main artifact C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\auth-server\target\auth-server-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\auth-server\target\auth-server-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ auth-server ---
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\auth-server\pom.xml to C:\Users\Mauricio\.m2\repository\com\duoc\batch\auth-server\0.0.1-SNAPSHOT\auth-server-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\auth-server\target\auth-server-0.0.1-SNAPSHOT.jar to C:\Users\Mauricio\.m2\repository\com\duoc\batch\auth-server\0.0.1-SNAPSHOT\auth-server-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] -------------------< com.duoc.batch:csv-result-api >--------------------
+[INFO] Building csv-result-api 0.0.1-SNAPSHOT                             [5/7]
+[INFO]   from C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\csv-result-api\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ csv-result-api ---
+[INFO] Deleting C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\csv-result-api\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ csv-result-api ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ csv-result-api ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 8 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ csv-result-api ---
+[INFO] skip non existing resourceDirectory C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\csv-result-api\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ csv-result-api ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ csv-result-api ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ csv-result-api ---
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\csv-result-api\target\csv-result-api-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ csv-result-api ---
+[INFO] Replacing main artifact C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\csv-result-api\target\csv-result-api-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\csv-result-api\target\csv-result-api-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ csv-result-api ---
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\csv-result-api\pom.xml to C:\Users\Mauricio\.m2\repository\com\duoc\batch\csv-result-api\0.0.1-SNAPSHOT\csv-result-api-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\csv-result-api\target\csv-result-api-0.0.1-SNAPSHOT.jar to C:\Users\Mauricio\.m2\repository\com\duoc\batch\csv-result-api\0.0.1-SNAPSHOT\csv-result-api-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] -------------------< com.duoc.batch:account-service >-------------------
+[INFO] Building account-service 0.0.1-SNAPSHOT                            [6/7]
+[INFO]   from C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\account-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ account-service ---
+[INFO] Deleting C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\account-service\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ account-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ account-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 14 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ account-service ---
+[INFO] skip non existing resourceDirectory C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\account-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ account-service ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ account-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ account-service ---
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\account-service\target\account-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ account-service ---
+[INFO] Replacing main artifact C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\account-service\target\account-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\account-service\target\account-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ account-service ---
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\account-service\pom.xml to C:\Users\Mauricio\.m2\repository\com\duoc\batch\account-service\0.0.1-SNAPSHOT\account-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\account-service\target\account-service-0.0.1-SNAPSHOT.jar to C:\Users\Mauricio\.m2\repository\com\duoc\batch\account-service\0.0.1-SNAPSHOT\account-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ------------------< com.duoc.batch:reporting-service >------------------
+[INFO] Building reporting-service 0.0.1-SNAPSHOT                          [7/7]
+[INFO]   from C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\reporting-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ reporting-service ---
+[INFO] Deleting C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\reporting-service\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ reporting-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ reporting-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 8 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ reporting-service ---
+[INFO] skip non existing resourceDirectory C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\reporting-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ reporting-service ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ reporting-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ reporting-service ---
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\reporting-service\target\reporting-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ reporting-service ---
+[INFO] Replacing main artifact C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\reporting-service\target\reporting-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\reporting-service\target\reporting-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ reporting-service ---
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\reporting-service\pom.xml to C:\Users\Mauricio\.m2\repository\com\duoc\batch\reporting-service\0.0.1-SNAPSHOT\reporting-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\reporting-service\target\reporting-service-0.0.1-SNAPSHOT.jar to C:\Users\Mauricio\.m2\repository\com\duoc\batch\reporting-service\0.0.1-SNAPSHOT\reporting-service-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for saga-contracts 0.0.1-SNAPSHOT:
+[INFO] 
+[INFO] saga-contracts ..................................... SUCCESS [  6.885 s]
+[INFO] config-server ...................................... SUCCESS [  6.025 s]
+[INFO] eureka-server ...................................... SUCCESS [  4.414 s]
+[INFO] auth-server ........................................ SUCCESS [  4.460 s]
+[INFO] csv-result-api ..................................... SUCCESS [  7.691 s]
+[INFO] account-service .................................... SUCCESS [  5.297 s]
+[INFO] reporting-service .................................. SUCCESS [  4.853 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  41.131 s
+[INFO] Finished at: 2026-10-05T22:48:18-03:00
+[INFO] ------------------------------------------------------------------------

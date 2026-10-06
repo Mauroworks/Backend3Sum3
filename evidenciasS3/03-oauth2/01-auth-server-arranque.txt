@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 6 - Authorization Server OAuth2.0 arriba (log de arranque)
+FECHA  : 2026-10-05 22:56:34
+==============================================================================
+
+[INFO] Building auth-server 0.0.1-SNAPSHOT
+2026-10-05T22:56:27.056-03:00  INFO 9312 --- [auth-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9000 (http) with context path '/'
+2026-10-05T22:56:27.088-03:00  INFO 9312 --- [auth-server] [           main] com.duoc.auth.AuthServerApplication      : Started AuthServerApplication in 12.491 seconds (process running for 13.893)

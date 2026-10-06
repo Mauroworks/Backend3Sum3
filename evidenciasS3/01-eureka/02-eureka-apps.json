@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 2 - aplicaciones registradas en Eureka
+FECHA  : 2026-10-05 22:55:35
+COMANDO: curl.exe -s -H Accept: application/json http://localhost:8761/eureka/apps
+==============================================================================
+
+{"applications":{"versions__delta":"1","apps__hashcode":"","application":[]}}
+

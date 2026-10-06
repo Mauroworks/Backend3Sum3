@@ -1,0 +1,41 @@
+﻿==============================================================================
+PRUEBA : Punto 2 - trazas de registro en Eureka de los 3 microservicios
+FECHA  : 2026-10-05 22:58:44
+==============================================================================
+
+--- csv-result-api ---
+2026-10-05T22:57:05.572-03:00  INFO 26460 --- [csv-result-api] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-10-05T22:57:06.550-03:00  INFO 26460 --- [csv-result-api] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-10-05T22:57:06.577-03:00  INFO 26460 --- [csv-result-api] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-10-05T22:57:06.578-03:00  INFO 26460 --- [csv-result-api] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-10-05T22:57:06.579-03:00  INFO 26460 --- [csv-result-api] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-10-05T22:57:06.579-03:00  INFO 26460 --- [csv-result-api] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-10-05T22:57:06.579-03:00  INFO 26460 --- [csv-result-api] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-10-05T22:57:06.580-03:00  INFO 26460 --- [csv-result-api] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-10-05T22:57:06.580-03:00  INFO 26460 --- [csv-result-api] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-10-05T22:57:07.216-03:00  INFO 26460 --- [csv-result-api] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+
+--- account-service ---
+2026-10-05T22:57:41.477-03:00  INFO 15564 --- [account-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-10-05T22:57:42.244-03:00  INFO 15564 --- [account-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-10-05T22:57:42.271-03:00  INFO 15564 --- [account-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-10-05T22:57:42.271-03:00  INFO 15564 --- [account-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-10-05T22:57:42.272-03:00  INFO 15564 --- [account-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-10-05T22:57:42.272-03:00  INFO 15564 --- [account-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-10-05T22:57:42.273-03:00  INFO 15564 --- [account-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-10-05T22:57:42.274-03:00  INFO 15564 --- [account-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-10-05T22:57:42.274-03:00  INFO 15564 --- [account-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-10-05T22:57:42.600-03:00  INFO 15564 --- [account-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+
+--- reporting-service ---
+2026-10-05T22:58:19.779-03:00  INFO 12692 --- [reporting-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-10-05T22:58:20.573-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-10-05T22:58:20.601-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-10-05T22:58:20.601-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-10-05T22:58:20.602-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-10-05T22:58:20.602-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-10-05T22:58:20.603-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-10-05T22:58:20.604-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-10-05T22:58:20.605-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-10-05T22:58:21.351-03:00  INFO 12692 --- [reporting-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+

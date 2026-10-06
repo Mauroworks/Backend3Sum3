@@ -1,0 +1,93 @@
+﻿==============================================================================
+PRUEBA : Indice de evidencias generadas
+FECHA  : 2026-10-05 23:02:03
+==============================================================================
+
+## 00-build
+
+- build-resumen.txt
+- maven-package.txt
+
+## 01-eureka
+
+- 01-eureka-arranque.txt
+- 02-eureka-apps.json
+- 03-eureka-apps-final.json
+- 04-registro-eureka-logs.txt
+
+## 02-config-server
+
+- 01-config-server-arranque.txt
+- 02-config-account-service.json
+- 02-config-csv-result-api.json
+- 02-config-reporting-service.json
+
+## 03-oauth2
+
+- 01-auth-server-arranque.txt
+- 02-metadata-oauth2.json
+- 03-jwks.json
+- 04-token-response.json
+- 05-token-jwt-decodificado.json
+
+## 04-csv-result-api
+
+- 01-arranque.txt
+- 02-post-migracion.json
+- 03-get-resultados.json
+- 04-get-resumen.json
+- 05-rechazados-transacciones.json
+
+## 05-account-service
+
+- 01-arranque.txt
+- 02-get-cuentas.json
+- 03-get-resumen.json
+
+## 06-reporting-service
+
+- 01-arranque.txt
+- 02-get-reportes.json
+- 03-get-todos.json
+
+## 07-kafka-eventos
+
+- 00-kafka-contenedores.txt
+- 01-saga-coreografica.txt
+- 02-topic-kafka.txt
+- 03-eventos-consumidos.txt
+
+## 08-resilience4j
+
+- 01-health-csv-result-api.json
+- 02-circuitbreakers-csv-result-api.json
+- 03-circuitbreakers-account-service.json
+- 04-metricas-resilience4j.json
+- 05-sin-csv-result-api-fallback.json
+- 06-log-resiliencia-account-service.txt
+- 07-health-account-service.json
+
+## 09-docker-compose-pendiente
+
+- PENDIENTE.md
+
+## logs
+
+- account-service.log
+- account-service.log.err
+- auth-server.log
+- auth-server.log.err
+- config-server.log
+- config-server.log.err
+- csv-result-api.log
+- csv-result-api.log.err
+- eureka-server.log
+- eureka-server.log.err
+- reporting-service.log
+- reporting-service.log.err
+
+## Raiz
+
+- 00-indice.txt
+- guion-evidencias.ps1
+- README.md

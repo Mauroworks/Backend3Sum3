@@ -1,0 +1,108 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.duoc.batch:auth-server >---------------------
+[INFO] Building auth-server 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.7:run (default-cli) > test-compile @ auth-server >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ auth-server ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ auth-server ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ auth-server ---
+[INFO] skip non existing resourceDirectory C:\Users\Mauricio\Desktop\Programaci�n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\auth-server\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ auth-server ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:4.0.7:run (default-cli) < test-compile @ auth-server <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.7:run (default-cli) @ auth-server ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.7)
+
+2026-10-05T22:56:15.626-03:00  INFO 9312 --- [auth-server] [           main] com.duoc.auth.AuthServerApplication      : Starting AuthServerApplication using Java 25 with PID 9312 (C:\Users\Mauricio\Desktop\Programación\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\auth-server\target\classes started by Mauricio in C:\Users\Mauricio\Desktop\Programación\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\auth-server)
+2026-10-05T22:56:15.635-03:00  INFO 9312 --- [auth-server] [           main] com.duoc.auth.AuthServerApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-10-05T22:56:17.470-03:00  INFO 9312 --- [auth-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05T22:56:17.531-03:00  INFO 9312 --- [auth-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 0 JPA repository interfaces.
+2026-10-05T22:56:18.166-03:00  INFO 9312 --- [auth-server] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ae72bf15-bb9f-3ddf-bf09-71bf4db2cba8
+2026-10-05T22:56:19.008-03:00  INFO 9312 --- [auth-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9000 (http)
+2026-10-05T22:56:19.032-03:00  INFO 9312 --- [auth-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-05T22:56:19.033-03:00  INFO 9312 --- [auth-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-10-05T22:56:19.174-03:00  INFO 9312 --- [auth-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3453 ms
+2026-10-05T22:56:19.787-03:00  INFO 9312 --- [auth-server] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-05T22:56:19.937-03:00  INFO 9312 --- [auth-server] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-10-05T22:56:20.887-03:00  INFO 9312 --- [auth-server] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05T22:56:20.972-03:00  INFO 9312 --- [auth-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-05T22:56:21.350-03:00  INFO 9312 --- [auth-server] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:auth user=SA
+2026-10-05T22:56:21.355-03:00  INFO 9312 --- [auth-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-05T22:56:21.493-03:00  INFO 9312 --- [auth-server] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:auth]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: AUTH/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-05T22:56:22.373-03:00  INFO 9312 --- [auth-server] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05T22:56:22.420-03:00  INFO 9312 --- [auth-server] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T22:56:22.557-03:00  WARN 9312 --- [auth-server] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05T22:56:22.768-03:00  INFO 9312 --- [auth-server] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-10-05T22:56:26.104-03:00  INFO 9312 --- [auth-server] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-10-05T22:56:26.190-03:00  WARN 9312 --- [auth-server] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-05T22:56:26.205-03:00  INFO 9312 --- [auth-server] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-05T22:56:26.328-03:00  INFO 9312 --- [auth-server] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-10-05T22:56:26.374-03:00  INFO 9312 --- [auth-server] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-10-05T22:56:26.381-03:00  INFO 9312 --- [auth-server] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-05T22:56:26.395-03:00  INFO 9312 --- [auth-server] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-10-05T22:56:26.396-03:00  INFO 9312 --- [auth-server] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-10-05T22:56:26.396-03:00  INFO 9312 --- [auth-server] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-10-05T22:56:26.397-03:00  INFO 9312 --- [auth-server] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-10-05T22:56:26.397-03:00  INFO 9312 --- [auth-server] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-10-05T22:56:26.398-03:00  INFO 9312 --- [auth-server] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-10-05T22:56:26.398-03:00  INFO 9312 --- [auth-server] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-10-05T22:56:27.002-03:00  INFO 9312 --- [auth-server] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-10-05T22:56:27.005-03:00  INFO 9312 --- [auth-server] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-10-05T22:56:27.009-03:00  INFO 9312 --- [auth-server] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-05T22:56:27.012-03:00  INFO 9312 --- [auth-server] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1791251787011 with initial instances count: 1
+2026-10-05T22:56:27.020-03:00  INFO 9312 --- [auth-server] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVER with eureka with status UP
+2026-10-05T22:56:27.022-03:00  INFO 9312 --- [auth-server] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1791251787022, current=UP, previous=STARTING]
+2026-10-05T22:56:27.025-03:00  INFO 9312 --- [auth-server] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVER/DESKTOP-JH6RNIL.mshome.net:auth-server:9000: registering service...
+2026-10-05T22:56:27.056-03:00  INFO 9312 --- [auth-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9000 (http) with context path '/'
+2026-10-05T22:56:27.057-03:00  INFO 9312 --- [auth-server] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9000
+2026-10-05T22:56:27.088-03:00  INFO 9312 --- [auth-server] [           main] com.duoc.auth.AuthServerApplication      : Started AuthServerApplication in 12.491 seconds (process running for 13.893)
+2026-10-05T22:56:27.103-03:00  INFO 9312 --- [auth-server] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVER/DESKTOP-JH6RNIL.mshome.net:auth-server:9000 - registration status: 204
+2026-10-05T22:56:29.841-03:00  INFO 9312 --- [auth-server] [nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-05T22:56:29.842-03:00  INFO 9312 --- [auth-server] [nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-05T22:56:29.846-03:00  INFO 9312 --- [auth-server] [nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  04:11 min
+[INFO] Finished at: 2026-10-05T23:00:18-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.0.7:run (default-cli) on project auth-server: Process terminated with exit code: -1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

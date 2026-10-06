@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 1 - Config Server centralizado arriba (log de arranque)
+FECHA  : 2026-10-05 22:56:00
+==============================================================================
+
+[INFO] Building config-server 0.0.1-SNAPSHOT
+2026-10-05T22:55:54.084-03:00  INFO 2880 --- [config-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8888 (http) with context path '/'
+2026-10-05T22:55:54.117-03:00  INFO 2880 --- [config-server] [           main] c.duoc.config.ConfigServerApplication    : Started ConfigServerApplication in 6.728 seconds (process running for 8.109)

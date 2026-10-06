@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 6 - solicitud de token OAuth2.0
+FECHA  : 2026-10-05 22:56:34
+COMANDO: curl -X POST http://localhost:9000/oauth2/token -u client-app:secret -d grant_type=client_credentials -d scope=read
+==============================================================================
+
+{"access_token":"eyJraWQiOiIxM2IyYjZhMS0zYjI5LTRiZTMtODc5YS1iYjA2NzNkMzM3ZTIiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjbGllbnQtYXBwIiwiYXVkIjoiY2xpZW50LWFwcCIsIm5iZiI6MTc5MTI1MTc5NCwic2NvcGUiOlsicmVhZCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwMDAiLCJleHAiOjE3OTEyNTIwOTQsImlhdCI6MTc5MTI1MTc5NCwianRpIjoiZDBkNDJiYTAtYzlmYy00MDMxLTk3ZDQtMWUyZDUyNmQ3YWU2In0.UIfrdzq9xl9WIgsZ2sJApmQd1kDV4Li_tBbi-hX70WkaAhuD5yGL64Vdtr0R7m4yu1ka-UxrnbiYHA9h7BFODBPVDcQDVZVA0LyR65h_OyQDKOn0_NFnDqmQ1imjsyFnmE5Z0NC2_AoutOEhYyeGhmYv6th-630AfYFU6zSfTt7kWxPa93IiBlNft9eELgxcA3xKtddltt7twIiUSyC_dSKHsHOu4hDaqjWvxVVX2aRQShrNft0YlGFlfHVTy2v0X6PGxdWEYTvgn6v0KvtWjSIBvE49S1UEuloUVeoI_XGXx6MgJxPe_WHQaGxlbDAkdoRYfrAfW4ldXmb-19k71Q","scope":"read","token_type":"Bearer","expires_in":300}
+

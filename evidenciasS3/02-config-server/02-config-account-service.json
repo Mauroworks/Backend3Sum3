@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 1 - configuraciÃ³n centralizada servida para account-service
+FECHA  : 2026-10-05 22:56:01
+COMANDO: curl.exe -s -H Accept: application/json http://localhost:8888/account-service/default
+==============================================================================
+
+{"name":"account-service","profiles":["default"],"label":null,"version":null,"state":null,"propertySources":[{"name":"classpath:/config/account-service.yml","source":{"server.port":8091,"spring.datasource.url":"jdbc:h2:mem:account;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE","spring.datasource.driver-class-name":"org.h2.Driver","spring.datasource.username":"sa","spring.datasource.password":"","spring.jpa.hibernate.ddl-auto":"create-drop","spring.jpa.open-in-view":false,"spring.cloud.config.enabled":true,"spring.cloud.config.fail-fast":false,"spring.cloud.stream.bindings.sagaEvents-in-0.destination":"saga.banco.xyz","spring.cloud.stream.bindings.sagaEvents-in-0.group":"cuenta-consumer","spring.cloud.stream.bindings.sagaEvents-out-0.destination":"saga.banco.xyz","resilience4j.circuitbreaker.instances.cliente-csv-result-api.base-config":"default","clients.oauth2.token-uri":"${OAUTH2_TOKEN_URI:http://localhost:9000/oauth2/token}","clients.oauth2.client-id":"service-account","clients.oauth2.client-secret":"service-secret","clients.oauth2.scope":"read","clients.csv-result-api.url":"${CSV_RESULT_API_URL:http://localhost:8085}","logging.level.com.duoc.account":"INFO"}}]}
+

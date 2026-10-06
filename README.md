@@ -1,223 +1,160 @@
-# Procesador F1 — Sistema de Migración de Procesos Batch (Banco XYZ)
+﻿# Procesador F1 - Microservicios y Seguridad en la Nube
 
 ## Objetivo
 
-Modernizar los procesos batch del sistema legacy de **Banco XYZ** usando **Spring Batch**.
-Se re-crean **tres procesos clave** que antes se ejecutaban de forma manual/legacy:
+Proyecto desarrollado para implementar arquitectura de microservicios resilientes con Spring Cloud, incluyendo Config Server centralizado, Service Discovery (Eureka), arquitectura basada en eventos con Kafka, tolerancia a fallos con Resilience4j, seguridad OAuth2.0 y contenerización con Docker.
 
-1. **Reporte de Transacciones Diarias** — lee el CSV de transacciones, valida los datos,
-   detecta anomalías y genera un resumen diario.
-2. **Cálculo de Intereses Mensuales** — aplica tasas de interés sobre cuentas de ahorro,
-   préstamos e hipotecas, y actualiza el **saldo final** por cuenta.
-3. **Generación de Estados de Cuenta Anuales** — compila los movimientos anuales por cuenta
-   y genera un informe detallado para auditorías.
+## Arquitectura y decisiones tomadas
 
-Todos los procesos leen archivos CSV de la carpeta `csvsemana3/`, procesan/validan los datos
-con un `ItemProcessor`, y escriben el resultado en una **base de datos relacional H2 en memoria**.
+### 1. Configuración centralizada
+Se implementa **Spring Cloud Config Server** (`config-server`, puerto 8888) para centralizar configuraciones de los microservicios, permitiendo su gestión unificada y facilitando despliegues en entorno cloud.
 
----
+### 2. Service Discovery
+**Netflix Eureka** (`eureka-server`, puerto 8761) habilita registro y descubrimiento dinámico de microservicios, eliminando hardcoding de URLs y mejorando escalabilidad.
 
-## Tecnologías
+### 3. Microservicios desarrollados
 
-| Componente        | Versión / Detalle |
-|-------------------|-------------------|
-| Java              | 25                 |
-| Maven / Wrapper   | 3.9.16 / `mvnw.cmd`|
-| Spring Boot       | 4.0.7              |
-| Spring Framework  | 7.0.8              |
-| Spring Batch      | 6.0.4              |
-| Spring Data JPA   | con Hibernate 7.2  |
-| Base de datos     | H2 (en memoria)    |
-| Persistencia      | `jakarta.persistence` |
+Basados en los datos CSV de semana3, se implementaron 3 microservicios:
 
-> Importante: Spring Batch 6 movió varios paquetes. Todo el código usa los paquetes nuevos,
-> por ejemplo `org.springframework.batch.infrastructure.item.*` (item), `org.springframework.batch.core.job.*`
-> (Job), `org.springframework.batch.core.step.*` (Step), y `jakarta.persistence`.
+- **csv-result-api** (puerto 8085): API REST que expone los resultados de la migración de datos de CSVs (transacciones, intereses, estados de cuenta). Cumple con el requisito de "API con resultado de migración de datos". Implementa CircuitBreaker y Retry con Resilience4j.
+- **account-service** (puerto 8091): Gestiona información de cuentas, saldos finales e intereses calculados. Publica eventos de cambios de cuenta hacia el bus de eventos.
+- **reporting-service** (puerto 8092): Genera y consolida reportes. Consume eventos asíncronos desde Kafka para procesamiento de reportes de manera resiliente.
 
----
+### 4. Arquitectura de eventos (Saga Coreográfica)
 
-## Estructura del código
+Se seleccionó **Saga Coreográfica** (Choreographed Saga) porque:
+- Cada microservicio publica eventos cuando ocurre un cambio de estado, otros reaccionan independientemente.
+- No requiere orquestador central (menor acoplamiento, mayor resiliencia).
+- Adecuado para el flujo de validación → cálculo → reporte.
+- Se complementa con enfoque event-driven para garantizar desacoplamiento entre servicios.
+
+### 5. Mensajería asíncrona (Kafka vs JMS)
+
+Se eligió **Apache Kafka** por:
+- Alto throughput y escalabilidad distribuida.
+- Persistencia duradera y capacidad de replay de eventos.
+- Integración nativa con Spring Cloud Stream (Kafka Binder).
+- Ideal para arquitectura pub/sub y patrones event-driven escalables.
+- Mejor adaptación a entornos cloud nativos comparado con JMS.
+
+Implementación: Spring Cloud Stream con bindings para productores/consumidores, orquestando comunicación asíncrona entre account-service (productor) y reporting-service (consumidor).
+
+### 6. Seguridad OAuth2.0
+
+Se implementó **OAuth 2.0** con Spring Security:
+- **auth-server** (puerto 9000): Authorization Server (Spring Authorization Server) que emite tokens JWT.
+- **Resource Servers**: csv-result-api, account-service y reporting-service configurados como OAuth2 Resource Servers con validación de JWT (issuer-uri: http://localhost:9000).
+- Se migró de autenticación básica a OAuth2.0, siguiendo buenas prácticas para microservicios distribuidos.
+
+### 7. Tolerancia a fallos
+
+**Resilience4j** integrado en los microservicios con:
+- CircuitBreaker: protege llamadas ante fallos, con fallback a respuestas vacías/controladas.
+- Retry: reintentos automáticos ante fallos transitorios.
+- Configuración de health indicators para monitoreo.
+
+### 8. Contenerización y Orquestación
+
+- **Dockerfiles** para cada microservicio (Java 21).
+- **docker-compose.yml** orquesta todos los componentes: eureka-server, config-server, auth-server, zookeeper, kafka, y los 3 microservicios.
+- Red dedicada `f1-network` para comunicación entre contenedores.
+
+## Estructura del proyecto
 
 ```
 procesadorf1/
-├── pom.xml
-├── InstruccionesSumativa1.txt
-├── csvsemana3/
-│   ├── transacciones.csv
-│   ├── intereses.csv
-│   └── cuentas_anuales.csv
-└── src/main/java/com/duoc/batch/procesadorf1/
-    ├── Procesadorf1Application.java
-    ├── config/
-    │   ├── BatchConfig.java              # pool de threads + skip policy + chunk size
-    │   ├── ReadersConfig.java            # FlatFileItemReaders (CSV) + Synchronized wrappers
-    │   ├── WritersConfig.java            # JpaItemWriters
-    │   ├── BatchRunner.java              # lanza los 3 Jobs en orden (CommandLineRunner)
-    │   ├── ValidacionSkipPolicy.java     # política personalizada de tolerancia a fallos
-    │   ├── JobExecutionLogger.java       # log de inicio/fin de cada Step
-    │   ├── TransaccionesJobConfig.java   # Job 1
-    │   ├── InteresesJobConfig.java       # Job 2
-    │   └── CuentasAnualesJobConfig.java  # Job 3
-    ├── model/                            # entidades JPA + DTOs crudos (String)
-    ├── processor/                        # ItemProcessors (validación y corrección)
-    ├── service/                          # lógica de resumen/agregación post-proceso
-    ├── repository/                       # repositorios Spring Data JPA
-    ├── listener/                         # listeners de Job y de skip
-    ├── exception/                        # DataValidationException
-    └── util/                             # DateParser (multi-formato)
+├── bff-common/ bff-web/ bff-mobile/ bff-atm/ (existentes)
+├── saga-contracts/       # Records compartidos de los eventos de la Saga
+├── config-server/        # Config Server centralizado
+├── eureka-server/        # Service Discovery (Eureka)
+├── auth-server/          # Authorization Server OAuth2.0
+├── csv-result-api/       # API resultados migración CSV (microservicio 1)
+├── account-service/      # Servicio de cuentas (microservicio 2)
+├── reporting-service/    # Servicio de reportes (microservicio 3)
+├── csvsemana3/           # CSV de entrada (transacciones, intereses, cuentas_anuales)
+├── docker-compose.yml    # Orquestación de contenedores
+├── evidenciasS3/         # Evidencias del punto 11 + guion de ejecución
+└── InstruccionesSumativa3.txt
 ```
 
----
+## Instrucciones para ejecutar
 
-## Los tres Jobs
+### Opción 1: Ejecución local (modo desarrollo)
 
-### 1) Reporte de Transacciones Diarias
-- Lee `transacciones.csv` (`id, fecha, monto, tipo`).
-- Validaciones en `TransaccionProcessor`:
-  - `id` numérico, `fecha` válida (múltiples formatos), `monto` numérico, `tipo` = `credito`/`debito`.
-  - Registros inválidos (`invalid`, `desconocido`, `-1`, `2024-13-01`, montos vacíos, etc.)
-    lanzan `DataValidationException` → **skip** (se continúa con el resto).
-  - Montos negativos/cero se conservan pero se marcan como anomalía
-    (`ANOMALIA_NEGATIVO` / `ANOMALIA_CERO`).
-- Al terminar, `ResumenDiarioJobListener` genera el **resumen diario**
-  (totales crédito/débito, montos y número de anomalías) y lo persiste.
-
-### 2) Cálculo de Intereses Mensuales
-- Lee `intereses.csv` (`cuenta_id, nombre, saldo, edad, tipo`).
-- `InteresProcessor` aplica tasas por tipo:
-  ahorro 1.5%, préstamo 2.5%, hipoteca 1.2%.
-- Correcciones automáticas: saldo/edad vacíos o fuera de rango → 0; nombre vacío → `SIN_NOMBRE`.
-- Tipos inválidos (`-1`, `unknown`, vacíos) → skip.
-- Al terminar, `InteresJobListener` agrega por cuenta y actualiza el **saldo final** en BD.
-
-### 3) Estados de Cuenta Anuales
-- Lee `cuentas_anuales.csv` (`cuenta_id, fecha, transaccion, monto, descripcion`).
-- `CuentaAnualProcessor` normaliza (`depósito` → `deposito`), corrige montos vacíos → 0
-  y rechaza transacciones con datos inconsistentes.
-- Al terminar, `EstadoCuentaJobListener` consolida por cuenta
-  (depósitos, retiros, compras, pagos y saldo final del período).
-
----
-
-## Manejo de errores y tolerancia a fallos
-
-- `DataValidationException` se usa para datos inconsistentes y es **skipeable**.
-- `ValidacionSkipPolicy` (personalizada) decide qué excepciones se saltan:
-
-  ```java
-  public boolean shouldSkip(Throwable t, long skipCount) {
-      if (t instanceof DataValidationException) {           // se salta
-          if (skipCount >= maxSkip) throw new SkipLimitExceededException(maxSkip, t);
-          return true;
-      }
-      return false;                                          // cualquier otra: falla el step
-  }
-  ```
-
-- El step se configura con `.faultTolerant().skipPolicy(...)`, por lo que un registro
-  inválido no detiene el procesamiento del resto.
-- `CountingSkipListener` registra en consola cada registro saltado y su motivo
-  (`[SKIP-PROCESS] DataValidationException - ...`).
-- Límite de saltos configurable: `batch.skip.max` (por defecto 100.000; muy alto a propósito
-  para que un archivo "sucio" no aborte la corrida).
-
----
-
-## Estrategia de escalamiento (decisión)
-
-Se eligió la opción **más segura**: **chunk-oriented con multi-threading dentro del Step**
-(en lugar de particiones).
-
-- `TaskExecutor` (`ThreadPoolTaskExecutor`, bean `batchTaskExecutor`) con hilos
-  **core=4, max=8, queue=100**.
-- Cada Step procesa en chunks (by default `batch.chunk.size=50`).
-- Los lectores CSV se envuelven con `SynchronizedItemStreamReader` para que el
-  `FlatFileItemReader` sea seguro en un entorno multi-hilo.
-- Parámetros configurables en `application.properties`:
-  - `batch.threads.core`, `batch.threads.max`, `batch.threads.queue`
-  - `batch.chunk.size`
-  - `batch.skip.max`
-
-Razones: no replica lectores/escritores por partición (evita complicar el repositorio y el
-escritor JPA), suficiente para una sola instancia con H2, y fácil de ajustar solo con
-parámetros.
-
----
-
-## Configuración
-
-`src/main/resources/application.properties`:
-
-```properties
-# H2 en memoria
-spring.datasource.url=jdbc:h2:mem:procesadorf1;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-spring.datasource.driver-class-name=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-
-# JPA / Hibernate
-spring.jpa.hibernate.ddl-auto=create-drop
-spring.jpa.show-sql=false
-
-# Spring Batch: no auto-ejecutar trabajos al inicio (se lanzan con BatchRunner)
-spring.batch.job.enabled=false
-# crear esquema de metadatos de Batch en H2
-spring.batch.jdbc.initialize-schema=always
-
-# Parámetros de escalamiento / errores
-batch.chunk.size=50
-batch.threads.core=4
-batch.threads.max=8
-batch.threads.queue=100
-batch.skip.max=100000
-```
-
----
-
-## Cómo ejecutar
-
-Desde la raíz del proyecto (`procesadorf1/`):
+El camino más simple y reproducible es el guion de evidencias, que compila,
+levanta todo en el orden correcto, ejecuta las pruebas y detiene los servicios:
 
 ```powershell
-# Opción 1: compilar y ejecutar con Maven wrapper
-& .\mvnw.cmd package -DskipTests
-& java -jar target\procesadorf1-0.0.1-SNAPSHOT.jar
-
-# Opción 2: spring-boot:run
-& .\mvnw.cmd spring-boot:run
+powershell -ExecutionPolicy Bypass -NoProfile -File evidenciasS3\guion-evidencias.ps1
 ```
 
-La aplicación es una `CommandLineRunner`: al arrancar ejecuta los **tres Jobs en orden**
-y muestra la evidencia en consola, finalizando con código de salida **0**.
+Para levantar los servicios manualmente, en este orden:
 
----
+1. eureka-server (8761)
+2. config-server (8888)
+3. auth-server (9000)
+4. Zookeeper + Kafka (2181/9092)
+5. csv-result-api (8085), account-service (8091), reporting-service (8092)
 
-## Evidencia de ejecución
+```powershell
+# Instalar primero el POM padre y los modulos (spring-boot:run resuelve saga-contracts del repo local)
+./mvnw.cmd -N clean install -DskipTests
+./mvnw.cmd -pl saga-contracts,config-server,eureka-server,auth-server,csv-result-api,account-service,reporting-service clean install -DskipTests
 
-Salida de consola real (resumen de cada Job):
-
-```
-> EJECUTANDO JOB 1: REPORTE DE TRANSACCIONES DIARIAS ...
-===== FIN STEP 'stepProcesarTransacciones' => leidos=1000, escritos=491, saltados=509, status=COMPLETED
-===== RESUMEN DE TRANSACCIONES DIARIAS =====
-Total transacciones : 491
-Anomalias detectadas: 90
-< FIN 'jobReporteTransacciones' => status=COMPLETED
-
-> EJECUTANDO JOB 2: CALCULO DE INTERESES MENSUALES ...
-===== FIN STEP 'stepCalcularIntereses' => leidos=1000, escritos=669, saltados=331, status=COMPLETED
-Cuenta 101 (Diana Prince) -> saldoFinal=126968.00 interesAcumulado=1968.00
-...
-< FIN 'jobCalcularIntereses' => status=COMPLETED
-
-> EJECUTANDO JOB 3: GENERACION DE ESTADOS DE CUENTA ANUALES ...
-===== FIN STEP 'stepProcesarCuentasAnuales' => leidos=1000, escritos=1000, saltados=0, status=COMPLETED
-Cuenta 101 -> movimientos=46 depositos=36000.00 retiros=8200.00 compras=11300.00 pagos=1400.00 saldoFinal=17900.00
-...
-< FIN 'jobEstadosCuentaAnuales' => status=COMPLETED
-
-==================== FIN PROCESOS BATCH BANCO XYZ ======================   (exit code 0)
+./mvnw.cmd -pl eureka-server spring-boot:run
+./mvnw.cmd -pl config-server spring-boot:run
+./mvnw.cmd -pl auth-server spring-boot:run
+./mvnw.cmd -pl csv-result-api spring-boot:run
+./mvnw.cmd -pl account-service spring-boot:run
+./mvnw.cmd -pl reporting-service spring-boot:run
 ```
 
-Cada registro inválido se reporta con `[SKIP-PROCESS] DataValidationException - ...`
-(motivo concreto), demostrando la tolerancia a fallos.
+### Opción 2: Ejecución con Docker Compose
+
+```bash
+docker-compose up --build
+```
+
+La evidencia de esta vía está **pendiente**: ver
+`evidenciasS3/09-docker-compose-pendiente/PENDIENTE.md`.
+
+## Evidencias de ejecución
+
+Las evidencias del punto 11 están en `evidenciasS3/`, ordenadas por punto de la
+rúbrica. Ver `evidenciasS3/README.md` para el detalle de cada carpeta, las
+credenciales OAuth2.0 y la coreografía de la Saga.
+
+## Notas técnicas relevantes
+
+- **Config Server no fusiona archivos.** Cada microservicio declara
+  `spring.cloud.config.name: comun,<app>` para recibir la configuración
+  compartida (`comun.yml`) y la suya; con el nombre por defecto solo recibía
+  su propio archivo y le faltaban `issuer-uri`, Eureka y los brokers Kafka.
+- **Bindings de Spring Cloud Stream.** El bean de función se llama
+  `sagaEvents`, por lo que los bindings son `sagaEvents-out-0` y
+  `sagaEvents-in-0` (con guion y camelCase no aplican).
+- **Grupos de consumo distintos.** `account-service` usa `cuenta-consumer` y
+  `reporting-service` usa `reporte-consumer`. Si compartieran grupo, Kafka
+  repartiría los eventos y solo uno de los dos reaccionaría.
+- **Payload de Kafka.** Con `contentType: application/json` y un
+  `Consumer<Object>` el binder entrega `byte[]`; se decodifica a texto antes de
+  mapear a los records de `saga-contracts`.
+- **CSV con esquemas distintos.** El monto se resuelve por nombre de columna de
+  la cabecera, porque en `transacciones.csv` está en la 3ra posición y en
+  `cuentas_anuales.csv` en la 4ta.
+- **Spring Boot 4** requiere `resilience4j-spring-boot4`; la variante
+  `spring-boot3` falla al crear el `CircuitBreakerRegistry`. Además Spring Boot
+  4 ya no arrastra `spring-jcl`, por lo que se añadió `jcl-over-slf4j`.
+- **Jackson 3.** El `RestClient` de Spring Boot 4 serializa con
+  `tools.jackson`; pedir un `com.fasterxml.jackson.databind.JsonNode` como body
+  falla. Se solicita el body como `String` y se parsea con el `ObjectMapper`.
+
+## Tecnologías utilizadas
+
+- Java 21, Spring Boot 4.0.7
+- Spring Cloud 2025.1.3 (Config, Eureka, OpenFeign, Stream)
+- Spring Authorization Server 1.4.0 (OAuth2.0)
+- Resilience4j 2.4.0 (CircuitBreaker, Retry, TimeLimiter)
+- Apache Kafka + Zookeeper (Spring Cloud Stream Binder)
+- H2 Database (memoria)
+- Docker & Docker Compose

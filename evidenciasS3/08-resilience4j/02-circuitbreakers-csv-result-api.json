@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 3 - estado de los circuit breakers de csv-result-api
+FECHA  : 2026-10-05 23:00:01
+COMANDO: curl.exe -s http://localhost:8085/actuator/circuitbreakers
+==============================================================================
+
+{"circuitBreakers":{"consulta-resultados-migracion":{"bufferedCalls":5,"failedCalls":0,"failureRate":"0.0%","failureRateThreshold":"50.0%","notPermittedCalls":0,"slowCallRate":"0.0%","slowCallRateThreshold":"100.0%","slowCalls":0,"slowFailedCalls":0,"state":"CLOSED"}}}
+

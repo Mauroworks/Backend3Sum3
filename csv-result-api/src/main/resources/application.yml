@@ -1,0 +1,17 @@
+﻿spring:
+  application:
+    name: csv-result-api
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    config:
+      # comun primero: el Config Server no fusiona archivos, hay que pedir
+      # explicitamente la config compartida y la especifica del servicio.
+      name: comun,${spring.application.name}
+
+server:
+  port: 8085
+
+logging:
+  level:
+    root: INFO

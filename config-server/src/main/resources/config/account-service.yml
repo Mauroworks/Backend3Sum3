@@ -1,0 +1,44 @@
+﻿server:
+  port: 8091
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:account;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+
+  cloud:
+    config:
+      enabled: true
+      fail-fast: false
+    stream:
+      bindings:
+        sagaEvents-in-0:
+          destination: saga.banco.xyz
+          group: cuenta-consumer
+        sagaEvents-out-0:
+          destination: saga.banco.xyz
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      cliente-csv-result-api:
+        base-config: default
+
+clients:
+  oauth2:
+    token-uri: ${OAUTH2_TOKEN_URI:http://localhost:9000/oauth2/token}
+    client-id: service-account
+    client-secret: service-secret
+    scope: read
+  csv-result-api:
+    url: ${CSV_RESULT_API_URL:http://localhost:8085}
+
+logging:
+  level:
+    com.duoc.account: INFO

@@ -1,0 +1,16 @@
+﻿[INFO] Building saga-contracts 0.0.1-SNAPSHOT                             [1/7]
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\saga-contracts\target\saga-contracts-0.0.1-SNAPSHOT.jar
+[INFO] Building config-server 0.0.1-SNAPSHOT                              [2/7]
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\config-server\target\config-server-0.0.1-SNAPSHOT.jar
+[INFO] Building eureka-server 0.0.1-SNAPSHOT                              [3/7]
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\eureka-server\target\eureka-server-0.0.1-SNAPSHOT.jar
+[INFO] Building auth-server 0.0.1-SNAPSHOT                                [4/7]
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\auth-server\target\auth-server-0.0.1-SNAPSHOT.jar
+[INFO] Building csv-result-api 0.0.1-SNAPSHOT                             [5/7]
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\csv-result-api\target\csv-result-api-0.0.1-SNAPSHOT.jar
+[INFO] Building account-service 0.0.1-SNAPSHOT                            [6/7]
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\account-service\target\account-service-0.0.1-SNAPSHOT.jar
+[INFO] Building reporting-service 0.0.1-SNAPSHOT                          [7/7]
+[INFO] Building jar: C:\Users\Mauricio\Desktop\Programaci¾n\CARRERA DESARROLLO APLICACIONES DUOC UC\BACKEND3\procesadorf1\reporting-service\target\reporting-service-0.0.1-SNAPSHOT.jar
+[INFO] BUILD SUCCESS
+[INFO] Total time:  41.131 s

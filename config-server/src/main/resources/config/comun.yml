@@ -1,0 +1,84 @@
+﻿# =====================================================================
+# Configuracion centralizada compartida por los 3 microservicios.
+# Servida por config-server y consumida via:
+#   spring.config.import: optional=configserver:http://localhost:8888
+# =====================================================================
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,circuitbreakers
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+  instance:
+    prefer-ip-address: true
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${OAUTH2_ISSUER:http://localhost:9000}
+
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: ${KAFKA_BROKERS:localhost:9092}
+          autoCreateTopics: true
+          replicationFactor: 1
+      bindings:
+        sagaEvents-out-0:
+          destination: saga.banco.xyz
+          contentType: application/json
+        sagaEvents-in-0:
+          destination: saga.banco.xyz
+          contentType: application/json
+          # El group NO se declara aqui: cada consumidor necesita el suyo
+          # (cuenta-consumer / reporte-consumer). Si se comparte, Kafka
+          # reparte los eventos y solo un servicio los recibe.
+      function:
+        definition: sagaEvents
+
+resilience4j:
+  # Solo se declara la config base "default". Declarar ademas
+  # instances.default con base-config: default produce una referencia circular
+  # ("Circular reference detected in instance config: default") y el
+  # CircuitBreakerRegistry no se puede crear.
+  circuitbreaker:
+    configs:
+      default:
+        sliding-window-type: COUNT_BASED
+        sliding-window-size: 10
+        minimum-number-of-calls: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 20s
+        permitted-number-of-calls-in-half-open-state: 3
+        automatic-transition-from-open-to-half-open-enabled: true
+        register-health-indicator: true
+  retry:
+    configs:
+      default:
+        max-attempts: 3
+        wait-duration: 300ms
+        enable-exponential-backoff: true
+        exponential-backoff-multiplier: 2
+  timelimiter:
+    configs:
+      default:
+        timeout-duration: 3s
+        cancel-running-future: true
+
+logging:
+  level:
+    com.duoc: INFO
+    org.springframework.cloud.stream: INFO
+    org.springframework.kafka: WARN

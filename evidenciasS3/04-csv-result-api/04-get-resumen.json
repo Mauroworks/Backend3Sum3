@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 3 - GET /api/migracion/resumen (totales migrados / rechazados)
+FECHA  : 2026-10-05 22:58:48
+COMANDO: curl.exe -s -H Authorization: Bearer <<JWT>> http://localhost:8085/api/migracion/resumen
+==============================================================================
+
+{"totalFilas":3000,"migrados":2575,"migradosConAnomalia":425,"rechazados":0,"totalMonto":9000010.00}
+

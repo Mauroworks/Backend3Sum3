@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 1 - configuraciÃ³n centralizada servida para csv-result-api
+FECHA  : 2026-10-05 22:56:00
+COMANDO: curl.exe -s -H Accept: application/json http://localhost:8888/csv-result-api/default
+==============================================================================
+
+{"name":"csv-result-api","profiles":["default"],"label":null,"version":null,"state":null,"propertySources":[{"name":"classpath:/config/csv-result-api.yml","source":{"server.port":8085,"spring.datasource.url":"jdbc:h2:mem:csvresult;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE","spring.datasource.driver-class-name":"org.h2.Driver","spring.datasource.username":"sa","spring.datasource.password":"","spring.jpa.hibernate.ddl-auto":"create-drop","spring.jpa.open-in-view":false,"spring.cloud.config.enabled":true,"spring.cloud.config.fail-fast":false,"spring.cloud.stream.bindings.sagaEvents-out-0.destination":"saga.banco.xyz","resilience4j.circuitbreaker.instances.consulta-resultados-migracion.base-config":"default","logging.level.com.duoc.csvresult":"INFO"}}]}
+

@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 3 - metricas de resilience4j (circuit breaker / retry)
+FECHA  : 2026-10-05 23:00:01
+COMANDO: curl.exe -s http://localhost:8091/actuator/metrics/resilience4j.circuitbreaker.calls
+==============================================================================
+
+{"availableTags":[{"tag":"kind","values":["ignored","failed","successful"]},{"tag":"name","values":["cliente-csv-result-api"]}],"baseUnit":"seconds","description":"Total number of failed calls","measurements":[{"statistic":"COUNT","value":3.0},{"statistic":"TOTAL_TIME","value":2.0441377},{"statistic":"MAX","value":1.2224672}],"name":"resilience4j.circuitbreaker.calls"}
+

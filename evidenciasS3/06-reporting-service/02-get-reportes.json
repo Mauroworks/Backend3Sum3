@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 3 - GET /api/reports?sagaId (reporte del saga)
+FECHA  : 2026-10-05 22:59:20
+COMANDO: curl.exe -s -H Authorization: Bearer <<JWT>> http://localhost:8092/api/reports?sagaId=SAGA-F9BF7DD5
+==============================================================================
+
+[{"sagaId":"SAGA-F9BF7DD5","tipo":"RESUMEN_MIGRACION","estado":"GENERADO","totalCuentas":2575,"saldoTotal":0.00,"detalle":"Filas migradas=2575, rechazadas=425","id":1},{"sagaId":"SAGA-F9BF7DD5","tipo":"ESTADO_CUENTA_ANUAL","estado":"GENERADO","totalCuentas":3000,"saldoTotal":145411.05,"detalle":"Total intereses=145411.05","id":2}]
+

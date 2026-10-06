@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 3 - GET /api/accounts/resumen
+FECHA  : 2026-10-05 22:59:04
+COMANDO: curl.exe -s -H Authorization: Bearer <<JWT>> http://localhost:8091/api/accounts/resumen
+==============================================================================
+
+{"sagasProcesadas":1,"totalCuentas":1000}
+

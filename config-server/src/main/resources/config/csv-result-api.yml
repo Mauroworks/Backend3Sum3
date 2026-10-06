@@ -1,0 +1,32 @@
+﻿server:
+  port: 8085
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:csvresult;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+
+  cloud:
+    config:
+      enabled: true
+      fail-fast: false
+    stream:
+      bindings:
+        sagaEvents-out-0:
+          destination: saga.banco.xyz
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      consulta-resultados-migracion:
+        base-config: default
+
+logging:
+  level:
+    com.duoc.csvresult: INFO

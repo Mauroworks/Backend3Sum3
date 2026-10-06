@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 3 - POST /api/migracion/ejecutar (resultado de la migracion de CSV)
+FECHA  : 2026-10-05 22:58:46
+COMANDO: curl.exe -s -X POST -H Authorization: Bearer <<JWT>> http://localhost:8085/api/migracion/ejecutar?ruta=C%3A%2FUsers%2FMauricio%2FDesktop%2FProgramaci%C3%B3n%2FCARRERA%20DESARROLLO%20APLICACIONES%20DUOC%20UC%2FBACKEND3%2Fprocesadorf1%2Fcsvsemana3
+==============================================================================
+
+{"evento":"MIGRACION_DATOS_COMPLETADA","sagaId":"SAGA-F9BF7DD5","filasMigradas":2575,"rechazadas":425,"detalle":[{"archivo":"transacciones.csv","filas":1000,"validas":841,"invalidas":159},{"archivo":"intereses.csv","filas":1000,"validas":1000,"invalidas":0},{"archivo":"cuentas_anuales.csv","filas":1000,"validas":734,"invalidas":266}],"fecha":"2026-10-06T01:58:45.205416900Z"}
+

@@ -1,0 +1,8 @@
+﻿==============================================================================
+PRUEBA : Punto 5 - topic saga.banco.xyz
+FECHA  : 2026-10-05 22:59:24
+==============================================================================
+
+Topic: saga.banco.xyz	TopicId: ZXtDLXKWT_67CbCQMDdttw	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+	Topic: saga.banco.xyz	Partition: 0	Leader: 1	Replicas: 1	Isr: 1
+

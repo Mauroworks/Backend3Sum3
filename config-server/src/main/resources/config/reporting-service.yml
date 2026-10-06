@@ -1,0 +1,35 @@
+﻿server:
+  port: 8092
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:reporting;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+
+  cloud:
+    config:
+      enabled: true
+      fail-fast: false
+    stream:
+      bindings:
+        sagaEvents-in-0:
+          destination: saga.banco.xyz
+          group: reporte-consumer
+      function:
+        definition: sagaEvents
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      cliente-account-service:
+        base-config: default
+
+logging:
+  level:
+    com.duoc.reporting: INFO
